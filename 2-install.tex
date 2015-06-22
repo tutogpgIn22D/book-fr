@@ -1,0 +1,406 @@
+\chapter{Installation des outils de base}
+
+\section{Les logiciels nécessaires}\label{les-logiciels-nuxe9cessaires}
+
+Pour pouvoir utiliser GPG, il vous faut \ldots{}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  GPG
+\item
+  Un gestionnaire de clés tel que :
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Kgpg/Kleopatra
+  \item
+    Enigmail
+  \end{itemize}
+\item
+  Un client courriel tel que :
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    kmail
+  \item
+    Thunderbird
+  \item
+    Évolution
+  \end{itemize}
+\end{enumerate}
+
+Très souvent, les gestionnaires de clés sont des logiciels additifs aux
+clients courriels, des extensions. Ils ont pour la plupart les mêmes
+options de base.\\Le choix de tel ou tel environnement s'avère donc
+trivial, une affaire de goût et d'esthétique plutôt que de
+fonctionnalités.
+
+Kgpg est un élément de la suite KDE, qui s'utilise donc surtout avec
+Kmail et Kontact. De même Enigmail fonctionne avec Thunderbird.
+
+\emph{Il est à noter que les tablettes et téléphones Samsung avec
+Android ont maintenant tous les outils GPG nécessaires. Le problème
+c'est que vous ne pouvez vraiment leur faire confiance.}
+
+\emph{C'est néanmoins un bon moyen pour faire votre initiation à GPG.
+Vous voudrez certainement recréer des clés après ça sur un vrai
+ordinateur.}
+
+Au passage, vous pouvez envisager, si vous êtes vraiment motivé,
+d'installer votre propre système de courriel.\\Ça devient accessible au
+non-informaticien, grâce à \href{https://yunohost.org/}{YunoHost} par
+exemple.\\Ou dans une autre philosophie, OpenBSD, très
+\href{http://blog.chown.me/pourquoi-j-adore-openbsd.html}{simple
+d'installation}, mais un poil difficile à prendre en main. Toutefois,
+pas plus difficile, de base, qu'une Debian.
+
+\section{Recommandations}\label{recommandations}
+
+\begin{quote}
+La plupart de ces recommandations sont d'ordre général. Il s'agit de ce
+qu'on pourrait appeler ``des pratiques de base saines pour votre
+ordinateur''.
+\end{quote}
+
+En gros, il faut éviter le webmail, qui est une très mauvaise chose -
+déjà de base - puisque vous accédez à votre courriel via le web, donc on
+ne maîtrise pas la sécurité. Sans même parler d'utiliser GPG là dedans !
+
+Il faut également éviter de récupérer des logiciels sur des sites tiers
+comme 01net et telecharger.com.\\Il est plutôt recommandé d'aller voir
+le
+\href{http://cyrille-borne.com/article398/le-site-de-confiance-c-est-termine}{site
+web du concepteur du logiciel - tout en restant prudent}, ou un site
+officiel, comme le site web d'Apple pour le cas d'un logiciel pour Mac
+par exemple.
+
+Lorsque vous pouvez utiliser un logiciel libre ou open-source plutôt
+qu'un logiciel propriétaire, faîtes le. C'est d'autant plus important
+dans le cadre de protocoles critiques (sécurité\ldots{}).\\En effet,
+avec un code en libre accès, n'importe qui peut vérifier la qualité du
+code, garantir l'absence de portes dérobées, de pratiques douteuses.\\Un
+code source ouvert (\emph{opensource}) signifie donc que vous pouvez lui
+faire confiance pour \emph{vous protéger, vous et votre vie privée} ! Et
+si vraiment vous êtes paranoïaque (c'est votre droit) alors vous pouvez
+prendre des cours de code, puis faire vous même cette vérification !
+
+Lors de l'installation d'un logiciel, ne faîtes pas «entrée» à tout va.
+Regardez les options.\\Il est fréquent qu'un installateur vous propose
+une barre d'outils ou autre, que vous n'avez pas demandé, et dont vous
+n'avez pas besoin.\\Ces micro-ajouts permanents sont source de
+ralentissements multiples, et contiennent parfois des logiciels espions.
+
+Certains auteurs de logiciels signent leurs binaires (le fichier à
+télécharger) avec leur clé gpg ou indiquent les sommes de contrôle MD5
+ou SHA. Je ne vous ai pas encore expliqué comment vérifier les
+signatures, mais si vous savez le faire, faîtes le !
+
+Le chiffrement et les signatures de vos courriels ne vous protégeront
+nullement contre les virus et autres saloperies qui traînent ! Ils vous
+garantiront que vos courriels sont bien authentiques et/ou n'ont pas été
+lus par une autre personne que le destinataire légitime.
+
+Vous trouverez ici
+\href{http://sanspseudofix.fr/kit-de-base-du-surf-tranquille-2/}{un
+guide pour la navigation internet plus
+sûre}.\\\href{http://genma.free.fr/?Petit-guide-d-hygiene-numerique}{Genma}
+(un fervent partisan de l'utilisation des outils de chiffrement) propose
+également un guide d'hygiène numérique - à
+\href{https://github.com/genma/Conference_Guide_d_hygiene_numerique/blob/master/Genma_Petit_Guide_d_hygiene_numerique.pdf?raw=true}{télécharger
+en pdf}.
+
+\section{GPG}\label{gpg}
+
+\subsection{Linux and co}\label{linux-and-co}
+
+Gpg est dans les standards des distributions Linux. Si vous ne l'avez
+pas, c'est que votre distro est tellement particulière que je n'en
+connais pas le mode d'installation ou de gestion des paquets (
+\emph{Slitaz} ?).
+
+Sous Debian \& co, si c'est pas déjà installé - ce qui serait bizarre
+puisque Debian utilise GPG pour signer et vérifier l'intégrité et
+l'authenticité des paquetages logiciels (!) , ça donne ça :
+
+\begin{verbatim}
+apt-get install gnupg gnupg2
+\end{verbatim}
+
+J'indique les deux paquets. La version 2 est celle recommandée
+aujourd'hui.
+
+De toute façon, il est dans les dépendances de tous les gestionnaires de
+clés qu'on verra plus loin.
+
+Les utilisateurs d'autres distributions ou d'outils graphiques tels que
+Synaptic, Apper ou Muom feront simplement une recherche sur
+\textbf{gnupg}. Il y a de fortes chances que votre gestionnaire de
+paquets vous dise qu'il est déjà installé.
+
+Il est aussi dans la base des Unix tel qu'OpenBSD.
+
+\subsection{Windows}\label{windows}
+
+Bon, là on s'attaque à un gros morceau !
+
+Il vous faut en fait \href{http://www.gpg4win.org/download.html}{Gpg4win
+- prenez la première version en haut, sauf si vous savez ce que vous
+faîtes}, qui \href{http://www.gpg4win.org/about.html}{contient
+d'ailleurs tout le nécessaire} : gestionnaire de clés, client
+courriel\ldots{}
+
+Une fois l'installateur téléchargé, lancez le. Il vous proposera
+d'installer d'autres logiciels en plus de GPG.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  GPA est un gestionnaire de clés
+\item
+  Kleopatra est un autre gestionnaire de clés
+\end{itemize}
+
+Vous avez besoin d'un des deux. Kleopatra est le plus décrit sur le web,
+c'est donc celui que je conseille (et je l'ai sous la main, si vous me
+demandez de l'aide, je pourrais plus facilement vous aider).
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  GpgOL, plugin pour Outlook
+\item
+  GpgEX, plugin pour l'explorateur de fichier de Windows.
+\end{itemize}
+
+Installez les si vous avez besoin.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Claws-Mail, logiciel de courrier léger
+\end{itemize}
+
+Les windowsiens, on vous facilite la vie décidément !
+
+\subsection{MacOS}\label{macos}
+
+Je n'ai pas de Mac sous la main. Mais Thunderbird est disponible sous
+Mac et vous pouvez donc
+l'utiliser.\\\href{http://www.gbronner.net/mail/GPGMacOSX.html}{Apparemment
+le client courriel natif de Mac} supporte également le chiffrement.
+
+Vous avez besoin, des outils de chiffrements
+\href{https://gpgtools.org/}{Gpg pour Mac}. Téléchargez donc la suite
+gpg.
+
+Vous pouvez (bon en fait vous \emph{devriez}) vérifier l'intégrité du
+fichier dmg en allant dans votre dossier de téléchargement (je suppose
+ici qu'il s'appelle \emph{downloads} ) dans votre terminal :
+
+\begin{verbatim}
+cd downloads
+openssl sha1 GPG_Suite…
+\end{verbatim}
+
+En tapant le nom du fichier, vous pouvez après faire auto-complétion :
+utilisez la touche de tabulation, le terminal complétera le nom du
+fichier.
+
+La commande ssl va vous indiquer une suite de caractères qui doivent
+correspondre à celle indiquée sur le site de gpgtools en dessus du
+bouton de téléchargement.
+
+Reste plus qu'à installer. Ouvrez le fichier dmg et cochez ou décochez
+les options qui vont bien.\\Il vous faut \emph{MacGPG2},
+\emph{GPGPreferences}, \emph{GPG Keychain Access}.
+
+Si vous utilisez le logiciel natif \textbf{Mail}, il vous faut aussi
+\textbf{GPG for Mail}, mais si vous utilisez Thunderbird, il vous faut
+par contre \textbf{GPG Services}.
+
+\section{Un client couriel}\label{un-client-couriel}
+
+\begin{quote}
+Je ne décrirais pas la configuration de la messagerie, des adresses
+courriels.\\Si vous êtes venus jusqu'ici, ce dont je vous félicite,
+c'est que vous êtes motivés pour apprendre/chercher la solution par
+vous-même et/ou que vous savez déjà configurer une adresse courriel.
+\end{quote}
+
+\begin{quote}
+Toutefois, on peut toujours me
+\href{\{filename\}../pages/contact-fr.md}{contacter} pour demander de
+l'aide et un tutoriel basique pour la configuration de la messagerie de
+Thunderbird (aisement transposable aux autres logiciels de courrier) est
+disponible
+\href{http://www.astucesinternet.com/modules/news/article.php?storyid=180}{ici}.
+\end{quote}
+
+Bon, vous avez le logiciel de base installé, mais rien d'autre pour
+l'instant à priori. Prenez le client courriel de votre choix.
+
+\subsection{Thunderbird}\label{thunderbird}
+
+Thunderbird est disponible en téléchargement et installation pour toutes
+les plates-formes majeures
+\href{https://www.mozilla.org/en-US/thunderbird/all.html}{ici}.
+
+Vous l'avez en français, et pour votre système
+\href{https://www.mozilla.org/fr/thunderbird/}{ici}.
+
+Il est à noter que le logiciel est renommé Icedove sous Debian suite à
+\href{http://fr.wikipedia.org/wiki/Renommage_des_applications_de_Mozilla_par_Debian}{la
+controverse entre Debian et Mozilla}.
+
+Vous pouvez donc l'installer avec apt :
+
+\begin{verbatim}
+apt-get install icedove
+\end{verbatim}
+
+\subsection{Claws-Mail}\label{claws-mail}
+
+Si vous êtes sous Windows, vous avez le client \textbf{Claws-Mail} dans
+l'installateur de \textbf{Gpg4win}
+
+\subsection{Kmail et Évolution}\label{kmail-et-uxe9volution}
+
+Kmail est disponible comme partie de la distribution KDE, Évolution
+comme partie de Gnome, donc si vous êtes sous GNU/Linux, vous devriez
+utiliser votre gestionnaire de paquet favori.
+
+\begin{verbatim}
+apt-get install kmail
+
+apt-get install evolution
+\end{verbatim}
+
+Même remarque qu'auparavant pour ce qui est des installateurs graphiques
+: Synaptic et consorts installeront toutes les dépendances, y compris
+\textbf{gnupg} si ce n'est pas encore le cas.
+
+\subsection{Les autres}\label{les-autres}
+
+Il existe une version \href{https://windows.kde.org/}{Windows de KDE},
+mais je n'ai jamais pris le temps de l'essayer.
+
+Sylpheed, client courriel disponible sous distributions Linux, Windows,
+Mac et d'autres Unix.
+
+\section{Un gestionnaire de clés}\label{un-gestionnaire-de-cluxe9s}
+
+\begin{quote}
+Rappel : Vous n'avez besoin que d'un seul de ces logiciels. Et très
+souvent le choix de tel ou tel logiciel dépend de votre environnement !
+\end{quote}
+
+\subsection{GPG Keychain sous Mac OS}\label{gpg-keychain-sous-mac-os}
+
+Le gestionnaire de clés s'appelle GPG Keychain sous Mac Os et vous
+l'avez normalement déjà installé lorsque vous avez installé GPG pour
+Mac.
+
+\subsection{Thunderbird : Enigmail}\label{thunderbird-enigmail}
+
+\textbf{\emph{Le jour de la publication de cet article, la version 1.8.1
+d'Énigmail est publiée. Il est vivement recommandé de prendre cette
+version, bien plus intuitive et facile à prendre en main !}}
+
+Si vous utilisez Thunderbird, vous avez besoin d'Énigmail, qui est en
+fait une extension, un plugin du logiciel utilisé par Thunderbird pour
+gérer son interaction avec GPG.
+
+Les utilisateurs de Thunderbird peuvent suivre
+\href{http://lehollandaisvolant.net/tuto/gpg/\#i2}{ce tutoriel}, qui est
+complet et dont je m'inspire beaucoup. Toutefois je le trouve indigeste
+car très long.
+
+\subsubsection{Première solution : le site web}\label{premiuxe8re-solution-le-site-web}
+
+L'installation est ici la même que pour l'installation d'un module
+Firefox : xpi.\\Il vous faut télécharger le plugin sur
+\href{https://www.enigmail.net/download/}{cette page} et bien sûr
+prendre la version correspondant à votre OS.\\Au passage, signalons
+comme l'indique bien
+\href{http://beta.babelzilla.org/projects/p/Enigmail/}{la page de
+traduction} qu'Énigmail est traduit dans de nombreuses langues, y
+compris français (90\%), mais pas danois, hélas.
+
+L'extension xpi s'installe comme suit : il faut démarrer Thunderbird,
+sélectionner «Outils» dans la barre des menus en haut, puis «plugins»,
+«extensions» ou «modules».\\Ou alors (suivant votre version de
+Thunderbird) cliquer sur le gros bouton en haut à droite, et
+sélectionner «plugins», «extensions» ou «modules».
+
+Ici, vous pouvez indiquer à Thunderbird que vous souhaiter installer une
+extension en cliquant en bas à gauche sur «installer\ldots{}».
+Thunderbird vous demandera dans quel dossier de votre ordinateur vous
+avez téléchargé le fichier xpi d'Énigmail.
+
+Une fois cette opération réalisée, il faut redémarrer Thunderbird.
+
+\subsubsection{Deuxième solution : télécharger via Thunderbird lui-même}\label{deuxiuxe8me-solution-tuxe9luxe9charger-via-thunderbird-lui-muxeame}
+
+Vous pouvez demander à Thunderbird/Icedove de vous télécharger et
+installer l'extension par lui-même.
+
+Allez dans la fenêtre des modules, comme indiqué précédemment et faîtes
+une recherche sur Enigmail. Normalement vous devriez l'avoir en tête de
+liste avec un bouton d'installation.
+
+\subsubsection{Bonus Debian : installation via Apt}\label{bonus-debian-installation-via-apt}
+
+Si vous utilisez Icedove (sic !) sous Debian, sachez qu'Énigmail est
+dans les dépots Debian et que vous pouvez donc l'installer via apt.
+C'est une bonne solution si vous partagez votre ordinateur avec d'autres
+utilisateurs.
+
+Par contre, je pense que si on installe Énigmail par ce biais, il faut
+alors éviter à tout prix de l'installer après par un autre moyen si vous
+voulez mettre à jour.
+
+Si vous souhaitez une autre version que celle des dépots, il vous faut
+la désinstaller au préalable.
+
+\textbf{\emph{Une seule version de ce logiciel par machine ! C'est, je
+pense, une mesure de sécurité.}}
+
+\begin{verbatim}
+apt-get install enigmail
+\end{verbatim}
+
+\emph{NB : Il n'y a pas de raison, si Debian a inclus Énigmail dans ses
+dépots que d'autres distributions GNU/Linux ne l'ai pas
+fait\ldots{}\\Essayez donc de chercher Énigmail dans votre gestionnaire
+de paquets.}
+
+\subsection{Kgpg/Kleopatra}\label{kgpgkleopatra}
+
+Kgpg et Kleopatra sont deux logiciels de gestion des clés et certificats
+de chiffrement sous le bureau KDE. Pour ma part, je préfère me servir de
+Kgpg, mais il est quand même très utile d'avoir les deux installés.
+
+Il y a de fortes chances, si vous êtes un fan de KDE comme moi que ces
+logiciels soient déjà installés. Mais sinon, comme précédemment, et
+suivant votre distribution :
+
+\begin{verbatim}
+apt-get install kgpg kleopatra
+\end{verbatim}
+
+Rappelez-vous que Kleopatra est aussi distribué dans l'installateur
+Gpg4win sous Windows.
+
+\subsection{Les autres}\label{les-autres-1}
+
+Il y a Seahorse sous Gnome, mais je ne connais pas du tout. Mais je
+doute fortement qu'il soit très différent de Kgpg. Il est disponible
+sous Debian :
+
+\begin{verbatim}
+apt-get install seahorse
+\end{verbatim}

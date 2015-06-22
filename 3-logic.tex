@@ -1,0 +1,67 @@
+\chapter{Un peu de théorie et de logique}
+
+\section{OpenPGP, comment ça marche ?}\label{openpgp-comment-uxe7a-marche}
+
+OpenPGP repose sur le principe de la cryptographie - ou chiffrement en français - asymétrique.
+
+Quand on parle de clés GPG, on parle en fait de couples de clés : une clé publique et une clé privée.
+
+\section{Pourquoi se compliquer la vie avec ça ?}\label{pourquoi-se-compliquer-la-vie-avec-uxe7a}
+
+Lorsque vous signez un message, vous voulez garantir que celui-ci vient
+bien de vous et qu'il n'a pas été altéré.\\C'est le même principe que
+les sceaux au Moyen-Âge : le cachet de cire intact garantissait
+l'authenticité et l'inviolabilité du message.
+
+Vous devez donc signer votre message avec quelque chose que vous seul
+avez en votre possession : votre clé \textbf{\emph{privée}} !
+
+Et comment vos interlocuteurs vérifient-ils que ce message est
+authentique ?\\Avec un élément qui est connu de tous, qui est public :
+la vérification des signatures se fait avec votre clé
+\textbf{\emph{publique}} !
+
+Inversement, quand on chiffre un message à votre attention, on le rend
+illisible pour toute personne n'en ayant pas la clé. Vous seul devez
+pouvoir le lire avec quelque chose que vous seul avez en votre
+possession : votre clé \textbf{\emph{privée}} !
+
+Mais comme n'importe qui doit pouvoir vous envoyer des messages
+chiffrés, l'opération de chiffrement doit se faire avec une information
+connue de tous : votre clé \textbf{\emph{publique}} !
+
+\section{Attention !}\label{attention}
+
+Faîtes attention ! Un message signé \textbf{peut être lu par n'importe
+qui sur le net}.
+
+La signature garantit que vous êtes bien l'émetteur du message, et que
+celui-ci n'a pas été altéré. Un message signé a donc plus de valeur
+juridique qu'un message non signé.
+
+\section{Récapitulatif}\label{ruxe9capitulatif}
+
+On signe ses messages avec sa clé \emph{privée}. On vérifie
+l'authenticité des messages d'autres personnes avec leur clé
+\emph{publique}.
+
+On chiffre les messages à destination d'autres personnes avec leur clé
+\emph{publique}, qu'ils déchiffreront avec leur clé \emph{privée}.
+
+Observez que c'est presque toujours le même côté de la liaison qui
+utilise le même coté de la clé: vous utilisez presque toujours votre clé
+privée, et vos correspondants n'utilisent que votre clé publique.
+
+Votre clé privée doit donc être jalousement gardée et protégée !
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics{\{filename\}../images/gollum.jpg}
+%\caption{}
+%\end{figure}
+
+C'est elle qui vous permet de contrôler votre coté de la liaison, de
+prouver votre identité et de lire votre courrier !
+
+VIendez lire l'article \href{\{filename\}4-key-generate-fr.md}{suivant}
+où vous allez enfin créer votre clé GPG !

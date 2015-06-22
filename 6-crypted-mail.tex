@@ -1,0 +1,200 @@
+\chapter{Lire et écrire du courrier chiffré}
+
+Bon, j'ai dû vous envoyer un courriel chiffré. Donc lisible seulement
+par vous.
+
+\section{Ce que j'ai fais}\label{ce-que-jai-fais}
+
+Lorsque j'ai récupéré votre clé publique, je l'ai mise dans mon
+trousseau de clés.\\Ceci m'a permis de l'analyser, et donc de vous
+indiquer que, oui, \emph{votre clé est bien générée}.
+
+\section{Conséquences}\label{consuxe9quences}
+
+Puisque j'ai votre clé publique, je peux désormais vous envoyer des
+messages chiffrés.
+
+\textbf{Avec un courriel chiffré, vous avez la certitude que vous seul
+avez pu lire ce message. En revanche vous ne pouvez être sûr de
+l'expéditeur.}
+
+Par contre, si je signe également mes messages, vous ne pouvez pas
+vérifier ma signature.\\En effet, encore une fois, pour vérifier ma
+signature, vous avez besoin de ma clé publique, et je ne vous ai pas
+encore indiqué comment la récupérer.
+
+\textbf{La signature est une preuve d'authenticité du message, donc de
+l'expéditeur.}
+
+C'est pour cette raison que votre logiciel de courriel vous indique
+sûrement que le courriel que je vous ai envoyé est signé par gpg, mais
+qu'il ne peut en vérifier la signature.
+
+\section{Un petit accroc}\label{un-petit-accroc}
+
+Attention ! Seul le corps du message est chiffré ! Le sujet, l'en-tête
+du message, ainsi que les méta-données (d'où le message a été envoyé, à
+qui, et par où il est passé) sont en clair et lisibles de tous. Il est
+difficile de faire autrement: comment les serveurs de messagerie
+pourraient-ils savoir à qui remettre le message si la destination n'est
+pas lisible ?
+
+Il est donc recommandé de mettre un sujet assez neutre et générique si
+vous voulez assurer une bonne confidentialité.
+
+Quelque chose comme «Un bon plan» plutôt que «le plan de domination du
+monde», ou «les derniers chiffres de production» plutôt que «chiffres de
+prod' en hausse de 50 \%: on a tout bon !»
+
+\section{Comment récupérer la clé publique ?}\label{comment-ruxe9cupuxe9rer-la-cluxe9-publique}
+
+\subsection{Par courriel}\label{par-courriel}
+
+J'aurais pu vous envoyer la clé publique du tutoriel, de la même façon
+que vous m'avez envoyé la votre.
+
+Mais ce n'est en fait pas très sûr: qu'est-ce qui garanti qu'une
+personne malveillante n'a pas détourné votre courriel et remplacé votre
+clé par une autre ?
+
+C'est le genre de réflexions que je souhaite vous voir développer. La
+sécurité sur internet est un processus, une manière de penser.
+
+\subsection{Sur une page web}\label{sur-une-page-web}
+
+Pour les personnes qui ont une page web, vous pouvez mettre votre clé à
+disposition dessus. Il est de bon ton d'indiquer aussi l'empreinte de la
+clé dans la page en question.
+
+Une empreinte de clé gpg est une suite de caractères alphanumériques
+propre à chaque clé. Une empreinte permet donc à la fois d'identifier de
+façon (relativement) sûre une clé et de garantir qu'elle est bien
+intègre, que personne ne l'a corrompue.
+
+Il est intéressant de voir qu'on utilise un vocabulaire réservé
+d'habitude aux humains : \emph{intégrité} et \emph{corruption}. Il
+s'agit bien d'indiquer des notions de confiance, d'absence de doute, de
+probité.
+
+Votre gestionnaire de clé vous donnera cette empreinte qui ressemblera à
+ceci :
+
+\begin{verbatim}
+30CF 1DA5 7E87 6BAA 730D E561 42E0 A02E F1C9 35A4
+\end{verbatim}
+
+Cette empreinte est celle de la clé publique de \emph{Tuto-gpg @
+22decembre.eu}.\\C'est le même principe que les
+\href{http://fr.wikipedia.org/wiki/MD5}{sommes de contrôle MD5} des
+fichiers téléchargés sur internet - typiquement une iso de distribution
+Linux.
+
+Certaines personnes mettent aussi l'empreinte de leur clé gpg sur leur
+carte de visite, pour pouvoir les distribuer plus facilement.
+
+\subsection{Les serveurs de clés}\label{les-serveurs-de-cluxe9s}
+
+En connaissant une empreinte de clé gpg, on peut demander à son
+gestionnaire de clés de trouver la clé sur internet ! En fait sur des
+serveurs que l'on appelle «serveurs de clés» ou «serveurs gpg».
+
+Voici quelques adresses de serveurs :
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  hkp://keyserver.ubuntu.com/
+\item
+  hkp://pool.sks-servers.net/ NB : vous voudrez sûrement visiter leur
+  \href{https://sks-keyservers.net/i/}{site web}.
+\item
+  hkp://pgp.mit.edu/
+\item
+  hkp(s)://keys.gnupg.net/
+\end{itemize}
+
+Vous pouvez indiquer à gpg d'utiliser en priorité le serveur que vous
+préférez grâce à la configuration de votre gestionnaire de clés.
+
+Le S indique que vous pouvez utiliser ce serveur avec une connexion
+sécurisée par TLS. L'avantage, si vous êtes parano, c'est que personne
+ne sait quelles clés vous recherchez.
+
+L'intérêt de ces serveurs c'est de vous permettre de publier votre clé,
+et de recevoir des clés et des messages signés et/ou chiffrés de la part
+de personnes que vous ne connaissez pas.
+
+\section{Exercice}\label{exercice}
+
+En guise d'exercice aujourd'hui, je vais vous demander de récupérer la
+clé publique du tutoriel, et de m'envoyer un courriel chiffré.
+
+\subsection{Récupérer la clé
+publique}\label{ruxe9cupuxe9rer-la-cluxe9-publique}
+
+Vous l'avez compris, il s'agit de vous faire comprendre le
+fonctionnement des serveurs de clés.
+
+Pour se faire, vous devez ouvrir la boite de dialogue avec le serveur de
+clé de votre gestionnaire de clés. Le logiciel vous proposera de faire
+une recherche avec une chaîne de caractères. Autrement dit, une
+empreinte, ou une adresse courriel.
+
+Soit vous copiez-collez l'empreinte de la clé du tutoriel (indiquée
+juste au dessus) ou l'adresse courriel dans la boite de dialogue.
+
+Votre gestionnaire de clés va alors vous proposer une ou plusieurs clés
+à télécharger.
+
+Si vous avez indiqué l'adresse courriel, vérifiez que l'empreinte est
+bien la bonne.\\Inversement, si vous avez indiqué l'empreinte, vérifiez
+qu'il s'agit bien de la bonne adresse !\\En effet, grâce à ces
+empreintes, on peut vérifier que la clé que l'on a téléchargée est bien
+celle qu'on cherchait.
+
+Justement, j'ai créée plusieurs jeux de clés, non pas pour vous piéger,
+mais pour vous faire réfléchir et travailler (travailler votre logique,
+je ne retire aucun revenu de ce tutoriel - mais si vous trouvez qu'il
+est utile, vous pouvez me flattrer - c'est dans la colonne de gauche).
+
+Le but de ce tutoriel c'est de vous apprendre à utiliser GPG, donc il
+vous faut l'utiliser pour le comprendre.
+
+Au passage, vous pouvez noter que ces personnes ont signé cette clé:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{http://alterlibriste.free.fr/}{alterlibriste}
+\item
+  \href{http://lehollandaisvolant.net/}{le hollandais volant}
+\end{itemize}
+
+Je me suis en effet inspiré de leurs textes, ou ils m'ont encouragé à
+écrire ce tutoriel. Je profite donc de ce moment pour les remercier,
+ainsi que:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{http://genma.free.fr/}{genma}
+\item
+  \href{https://maymay.net/}{Maymay} qui m'a entre autre aidé avec
+  quelques uns des articles anglais.
+\end{itemize}
+
+Regarder maintenant le courriel que je vous ai envoyé: votre logiciel
+vous indique sûrement que la signature est valide, non ?
+
+\subsection{Envoyer un courriel
+chiffré}\label{envoyer-un-courriel-chiffruxe9}
+
+Il faut donc que vous m'écriviez un courriel chiffré. Vous pouvez aussi
+le signer, mais cela n'a pas d'incidence.
+
+Juste avant de l'envoyer donc, cliquez sur le bouton \emph{Chiffrer} ou
+selectionner l'option qui va bien. Voila !
+
+Il est à noter que comme vous avez récupéré la clé publique du tutoriel,
+il est très probable que votre logiciel de courriel vous ait proposé de
+chiffrer le message lors de sa rédaction !

@@ -1,0 +1,154 @@
+\chapter{Signer son courriel}
+
+Vous avez suivi jusqu'ici et avez donc une clé gpg. Excellent !
+
+Vous pouvez aussi demander de l'aide par courriel à l'adresse du
+tutoriel : \emph{Tuto-gpg @ 22decembre.eu}.
+
+On va maintenant faire en sorte que vous puissiez utiliser votre clé
+dans votre courriel.
+
+\section{Mais comment faire pour que vos divers contacts puissent utiliser votre clé ?}\label{mais-comment-faire-pour-que-vos-divers-contacts-puissent-utiliser-votre-cluxe9}
+
+\subsection{Config' du client courriel}\label{config-du-client-courriel}
+
+Déjà, il faut leur signaler l'existence de gpg.\\Un petit texte en bas
+de votre courriel suffira. Ce texte est généralement appelé
+\emph{signature}. Il faut bien le différencier de la signature par GPG
+de vos messages.
+
+Voici ma signature française par exemple :
+
+\begin{quote}
+Ce fichier \textbf{\emph{signature.asc}} ? C'est une signature GPG.\\Si
+vous voulez savoir pourquoi j'utilise GPG et pourquoi vous le devriez
+aussi, vous pouvez lire mon article
+:\\http://www.22decembre.eu/2015/03/21/introduction-fr/
+\end{quote}
+
+Ce texte est à renseigner dans les options de votre client courriel.
+C'est également là que vous indiquez vos options pour vos signatures
+GPG.
+
+\subsubsection{Kmail}\label{kmail}
+
+Dans Kmail, c'est \textbf{\emph{Configuration \textgreater{} Configurer
+Kmail \textgreater{} Identités}}.
+
+Là, vous trouverez les options de chiffrement, où vous indiquez quelle
+clé \textbf{\emph{privée}} vous utilisez pour signer vos messages. Vous
+indiquez aussi ici quelle clé \textbf{\emph{publique}} est à utiliser
+pour chiffrer les messages à destination de vous-même (excellent moyen
+pour partager une info, un mot de passe entre plusieurs ordinateurs).
+
+Sur la question du format, il
+\href{http://blog.chown.me/choisir-pgp-mime-ou-pgp-inline.html}{vaut
+mieux} utiliser le chiffrement \emph{OpenPGP/Mime}, plutôt que
+\emph{inline}.
+
+Il est également important d'indiquer vos préférences quand à la
+rédaction des messages dans \textbf{\emph{Configuration \textgreater{}
+Configurer Kmail \textgreater{} Sécurité \textgreater{} Rédaction}}.
+Moi, j'ai presque tout coché (signer par défaut, chiffrer quand c'est
+possible\ldots{}) sauf \emph{Toujours afficher les clés de chiffrement}.
+
+\subsubsection{Thunderbird}\label{thunderbird}
+
+Dans \textbf{\emph{Outils \textgreater{} Paramètres des comptes}},
+sélectionnez le menu \emph{Sécurité OpenPGP} sous l'adresse qui vous
+plaît. Cochez l'option \emph{Activer le support OpenPGP (Enigmail) pour
+cette identité} ainsi que l'option \emph{Utiliser l'adresse électronique
+de cette identité} pour identifier la clef OpenPGP.
+
+Vous pouvez ensuite choisir vos options par défaut : chiffrer, signer
+tous vos courriels ou non, et si vous voulez utiliser le format
+\emph{PGP/Mime}, ce que je recommande (même remarque et même
+\href{http://blog.chown.me/choisir-pgp-mime-ou-pgp-inline.html}{lien}
+qu'au dessus).
+
+Vous avez aussi des options à choisir dans \textbf{\emph{Enigmail
+\textgreater{} Préférences}}.
+
+\subsubsection{Évolution}\label{uxe9volution}
+
+\emph{Édition \textgreater{} Préférences}
+
+Dans la fenêtre dans l'onglet \emph{Comptes de messagerie}, puis le
+compte en question et cliquer sur \emph{modifier}.\\Dans l'Editeur de
+comptes qui s'ouvre, aller dans l'onglet \emph{Sécurité}.\\Dans le champ
+\emph{ID de la clé PGP/GPG} : entrer l'identifiant en 8 caractères tel
+que récupéré dans votre gestionnaire de clés.
+
+Pensez aussi à mettre vos options par défaut.
+
+Lors de la rédaction d'un nouveau message, dans le menu \emph{Options},
+cliquer sur \emph{Chiffrer} ou \emph{Signer}.
+
+\section{Faut-il signer et chiffrer tout son courriel ?}\label{faut-il-signer-et-chiffrer-tout-son-courriel}
+
+La question est plus ou moins de nature philosophique et constitue un
+choix personnel.\\De toute façon le logiciel de courriel a très
+certainement de gros boutons qui n'attendent que d'être utilisés pour
+réaliser ces opérations.
+
+Pour ma part, j'aime bien cette remarque de Philip Zimmermann :
+
+\begin{quote}
+Que se passerait-il si tout le monde estimait que les citoyens honnêtes
+devraient utiliser des cartes postales pour leur courrier? Si un
+non-conformiste s'avisait alors d'imposer le respect de son intimité en
+utilisant une enveloppe, cela attirerait la suspicion. Peut-être que les
+autorités ouvriraient son courrier pour voir ce que cette personne
+cache.\\Heureusement, nous ne vivons pas dans ce genre de société car
+chacun protège la plupart de son courrier avec des enveloppes.\\Aussi
+personne n'attire la suspicion en protégeant son intimité avec une
+enveloppe. La sécurité vient du nombre.\\De la même manière, ce serait
+excellent si tout le monde utilisait la cryptographie de manière
+systématique pour tous ses e-mails, qu'ils soient innocents ou non, de
+telle sorte que personne n'attirerait la suspicion en protégeant
+l'intimité de ses e-mails par la cryptographie.\\Pensez à le faire comme
+une forme de solidarité.
+\end{quote}
+
+Dans tous les cas, vous pouvez signer tous vos courriers sans que cela
+pose de problème pour vos correspondants (normalement - il est possible
+qu'ils en aient s'ils utilisent un mauvais client de messagerie. Mais
+c'est extrêmement rare !).
+
+\textbf{Un courriel signé est authentique. Votre correspondant aura la
+certitude qu'il vient bien de vous et qu'il n'a pas été changé au cours
+de son acheminement. En revanche, il n'est pas encore possible de
+garantir que personne d'autre ne l'ait lû !}
+
+En revanche, vous ne pouvez chiffrer vos courriers que si vos
+correspondants utilisent eux aussi GPG ; puisque, rappelez-vous : vous
+avez besoin de leur clé publique pour chiffrer des messages à leur
+attention.
+
+\section{Exercice}\label{exercice}
+
+Bon, aujourd'hui, je vais vous demander de \emph{signer} un courriel à
+mon intention. Tout simplement !
+
+C'est pour cette raison que je vous ai demandé de m'envoyer la clé que
+vous avez généré lors de la lecture du précédent article : j'en ai
+besoin pour vérifier votre signature, donc pour vérifier que vous avez
+bien compris cette partie du tutoriel.
+
+Donc, revenons à l'exercice. Pour envoyer un courriel signé, ouvrez
+votre logiciel de courriel, et écrivez un message à \emph{Tuto-gpg @
+22decembre.eu}.
+
+Vous pouvez écrire ce que vous souhaitez, y compris une critique du
+tutoriel. Mais dans ce cas, j'aimerais qu'elle soit constructive,
+qu'elle me permette de l'améliorer.
+
+Avant de l'envoyer, sélectionnez \emph{Signer} dans les options ou
+utiliser le bouton adéquat.\\Si (comme moi) vous avez demandé à votre
+logiciel de courriel de signer tous vos messages, vous n'avez rien à
+faire en fait ! Sauf appuyer sur le bouton \emph{Envoyer}\ldots{}
+
+Quand vous aurez envoyé votre courriel, passez donc à
+\href{\{filename\}6-crypted-mail-fr.md}{l'article suivant}.
+
+Au plaisir de vous lire.
