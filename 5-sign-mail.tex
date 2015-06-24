@@ -41,10 +41,10 @@ indiquez aussi ici quelle clé \textbf{\emph{publique}} est à utiliser
 pour chiffrer les messages à destination de vous-même (excellent moyen
 pour partager une info, un mot de passe entre plusieurs ordinateurs).
 
-Sur la question du format, il
-\href{http://blog.chown.me/choisir-pgp-mime-ou-pgp-inline.html}{vaut
-mieux} utiliser le chiffrement \emph{OpenPGP/Mime}, plutôt que
-\emph{inline}.
+Sur la question du format, il vaut mieux utiliser le chiffrement \emph{OpenPGP/Mime}, plutôt que
+\emph{inline}\footnote{Le chiffrement ou la signature via \emph{OpenPGP/Mime} crée un fichier détaché contenant soit la signature, soit le message chiffré.
+	\emph{OpenPGP/inline} se contente lui de copier le résultat de la signature ou le message chiffré directement en clair dans le courriel.
+	Vous avez donc un énorme bloc de texte sans aucun sens au milieu de votre courriel. La plupart des clients courriels n'affichent pas ce bloc de texte, mais c'est néanmoins moche. Je vous encourage à lire cet article sur cette question: \url{http://blog.chown.me/choisir-pgp-mime-ou-pgp-inline.html}}.
 
 Il est également important d'indiquer vos préférences quand à la
 rédaction des messages dans \textbf{\emph{Configuration \textgreater{}
@@ -62,9 +62,7 @@ de cette identité} pour identifier la clef OpenPGP.
 
 Vous pouvez ensuite choisir vos options par défaut : chiffrer, signer
 tous vos courriels ou non, et si vous voulez utiliser le format
-\emph{PGP/Mime}, ce que je recommande (même remarque et même
-\href{http://blog.chown.me/choisir-pgp-mime-ou-pgp-inline.html}{lien}
-qu'au dessus).
+\emph{PGP/Mime}, ce que je recommande.
 
 Vous avez aussi des options à choisir dans \textbf{\emph{Enigmail
 \textgreater{} Préférences}}.
@@ -147,8 +145,3 @@ Avant de l'envoyer, sélectionnez \emph{Signer} dans les options ou
 utiliser le bouton adéquat.\\Si (comme moi) vous avez demandé à votre
 logiciel de courriel de signer tous vos messages, vous n'avez rien à
 faire en fait ! Sauf appuyer sur le bouton \emph{Envoyer}\ldots{}
-
-Quand vous aurez envoyé votre courriel, passez donc à
-\href{\{filename\}6-crypted-mail-fr.md}{l'article suivant}.
-
-Au plaisir de vous lire.

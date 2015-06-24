@@ -52,30 +52,31 @@ ordinateur.}
 
 Au passage, vous pouvez envisager, si vous êtes vraiment motivé,
 d'installer votre propre système de courriel.\\Ça devient accessible au
-non-informaticien, grâce à \href{https://yunohost.org/}{YunoHost} par
-exemple.\\Ou dans une autre philosophie, OpenBSD, très
-\href{http://blog.chown.me/pourquoi-j-adore-openbsd.html}{simple
-d'installation}, mais un poil difficile à prendre en main. Toutefois,
-pas plus difficile, de base, qu'une Debian.
+non-informaticien, grâce à YunoHost \footnote{\url{https://yunohost.org/}} par
+exemple.\\Ou dans une autre philosophie, OpenBSD, très simple
+d'installation\footnote{\url{http://blog.chown.me/pourquoi-j-adore-openbsd.html}}, mais un poil difficile à prendre en main. Toutefois, pas plus difficile, de base, qu'une Debian.
 
 \section{Recommandations}\label{recommandations}
 
-\begin{quote}
+\subsection{Remarque}
 La plupart de ces recommandations sont d'ordre général. Il s'agit de ce
 qu'on pourrait appeler ``des pratiques de base saines pour votre
 ordinateur''.
-\end{quote}
 
+\subsection{Sécurité du courriel}
 En gros, il faut éviter le webmail, qui est une très mauvaise chose -
 déjà de base - puisque vous accédez à votre courriel via le web, donc on
 ne maîtrise pas la sécurité. Sans même parler d'utiliser GPG là dedans !
 
+Le chiffrement et les signatures de vos courriels ne vous protégeront
+nullement contre les virus et autres saloperies qui traînent ! Ils vous
+garantiront que vos courriels sont bien authentiques et/ou n'ont pas été
+lus par une autre personne que le destinataire légitime.
+
+\subsection{Sécurité des logiciels}
 Il faut également éviter de récupérer des logiciels sur des sites tiers
 comme 01net et telecharger.com.\\Il est plutôt recommandé d'aller voir
-le
-\href{http://cyrille-borne.com/article398/le-site-de-confiance-c-est-termine}{site
-web du concepteur du logiciel - tout en restant prudent}, ou un site
-officiel, comme le site web d'Apple pour le cas d'un logiciel pour Mac
+le site web du concepteur du logiciel - tout en restant prudent\footnote{\url{http://cyrille-borne.com/article398/le-site-de-confiance-c-est-termine}}, ou un site officiel, comme le site web d'Apple pour le cas d'un logiciel pour Mac
 par exemple.
 
 Lorsque vous pouvez utiliser un logiciel libre ou open-source plutôt
@@ -99,19 +100,10 @@ télécharger) avec leur clé gpg ou indiquent les sommes de contrôle MD5
 ou SHA. Je ne vous ai pas encore expliqué comment vérifier les
 signatures, mais si vous savez le faire, faîtes le !
 
-Le chiffrement et les signatures de vos courriels ne vous protégeront
-nullement contre les virus et autres saloperies qui traînent ! Ils vous
-garantiront que vos courriels sont bien authentiques et/ou n'ont pas été
-lus par une autre personne que le destinataire légitime.
+\subsection{autres liens et documentations utiles}
 
-Vous trouverez ici
-\href{http://sanspseudofix.fr/kit-de-base-du-surf-tranquille-2/}{un
-guide pour la navigation internet plus
-sûre}.\\\href{http://genma.free.fr/?Petit-guide-d-hygiene-numerique}{Genma}
-(un fervent partisan de l'utilisation des outils de chiffrement) propose
-également un guide d'hygiène numérique - à
-\href{https://github.com/genma/Conference_Guide_d_hygiene_numerique/blob/master/Genma_Petit_Guide_d_hygiene_numerique.pdf?raw=true}{télécharger
-en pdf}.
+SPF a écrit un guide pour la navigation internet plus sûre\footnote{\url{http://sanspseudofix.fr/kit-de-base-du-surf-tranquille-2/}}.
+Genma (un fervent partisan de l'utilisation des outils de chiffrement) a son guide d'hygiène numérique\footnote{\url{http://genma.free.fr/?Petit-guide-d-hygiene-numerique}} \footnote{\url{https://github.com/genma/Conference_Guide_d_hygiene_numerique/blob/master/Genma_Petit_Guide_d_hygiene_numerique.pdf?raw=true}}.
 
 \section{GPG}\label{gpg}
 
@@ -126,9 +118,9 @@ Sous Debian \& co, si c'est pas déjà installé - ce qui serait bizarre
 puisque Debian utilise GPG pour signer et vérifier l'intégrité et
 l'authenticité des paquetages logiciels (!) , ça donne ça :
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install gnupg gnupg2
-\end{verbatim}
+\end{lstlisting}
 
 J'indique les deux paquets. La version 2 est celle recommandée
 aujourd'hui.
@@ -147,14 +139,11 @@ Il est aussi dans la base des Unix tel qu'OpenBSD.
 
 Bon, là on s'attaque à un gros morceau !
 
-Il vous faut en fait \href{http://www.gpg4win.org/download.html}{Gpg4win
-- prenez la première version en haut, sauf si vous savez ce que vous
-faîtes}, qui \href{http://www.gpg4win.org/about.html}{contient
-d'ailleurs tout le nécessaire} : gestionnaire de clés, client
+Il vous faut en fait Gpg4win \footnote{\url{http://www.gpg4win.org/download.html} - prenez la première version en haut, sauf si vous savez ce que vous
+faîtes}, qui contient d'ailleurs tout le nécessaire\footnote{\url{http://www.gpg4win.org/about.html}}: gestionnaire de clés, client
 courriel\ldots{}
 
-Une fois l'installateur téléchargé, lancez le. Il vous proposera
-d'installer d'autres logiciels en plus de GPG.
+Une fois l'installateur téléchargé, lancez le. Il vous proposera d'installer d'autres logiciels en plus de GPG.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -189,22 +178,20 @@ Les windowsiens, on vous facilite la vie décidément !
 \subsection{MacOS}\label{macos}
 
 Je n'ai pas de Mac sous la main. Mais Thunderbird est disponible sous
-Mac et vous pouvez donc
-l'utiliser.\\\href{http://www.gbronner.net/mail/GPGMacOSX.html}{Apparemment
-le client courriel natif de Mac} supporte également le chiffrement.
+Mac et vous pouvez donc l'utiliser.\\Apparemment
+le client courriel natif de Mac supporte également le chiffrement\footnote{\url{http://www.gbronner.net/mail/GPGMacOSX.html}}.
 
-Vous avez besoin, des outils de chiffrements
-\href{https://gpgtools.org/}{Gpg pour Mac}. Téléchargez donc la suite
-gpg.
+Vous avez besoin, des outils de chiffrements Gpg pour Mac. Téléchargez donc la suite
+gpg\footnote{\url{https://gpgtools.org/}}.
 
 Vous pouvez (bon en fait vous \emph{devriez}) vérifier l'intégrité du
 fichier dmg en allant dans votre dossier de téléchargement (je suppose
 ici qu'il s'appelle \emph{downloads} ) dans votre terminal :
 
-\begin{verbatim}
+\begin{lstlisting}
 cd downloads
-openssl sha1 GPG_Suite…
-\end{verbatim}
+openssl sha1 GPG_Suite
+\end{lstlisting}
 
 En tapant le nom du fichier, vous pouvez après faire auto-complétion :
 utilisez la touche de tabulation, le terminal complétera le nom du
@@ -246,21 +233,15 @@ l'instant à priori. Prenez le client courriel de votre choix.
 \subsection{Thunderbird}\label{thunderbird}
 
 Thunderbird est disponible en téléchargement et installation pour toutes
-les plates-formes majeures
-\href{https://www.mozilla.org/en-US/thunderbird/all.html}{ici}.
+les plates-formes majeures\footnote{lien vers la page de téléchargement universelle: \url{https://www.mozilla.org/en-US/thunderbird/all.html}.
+	Vous l'avez ici en français, et pour votre système: \url{https://www.mozilla.org/fr/thunderbird/}}.
 
-Vous l'avez en français, et pour votre système
-\href{https://www.mozilla.org/fr/thunderbird/}{ici}.
+Vous pouvez donc l'installer avec apt\footnote{Il est à noter que le logiciel est renommé Icedove sous Debian suite à la
+	controverse entre Debian et Mozilla: \url{http://fr.wikipedia.org/wiki/Renommage_des_applications_de_Mozilla_par_Debian}} :
 
-Il est à noter que le logiciel est renommé Icedove sous Debian suite à
-\href{http://fr.wikipedia.org/wiki/Renommage_des_applications_de_Mozilla_par_Debian}{la
-controverse entre Debian et Mozilla}.
-
-Vous pouvez donc l'installer avec apt :
-
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install icedove
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Claws-Mail}\label{claws-mail}
 
@@ -273,11 +254,11 @@ Kmail est disponible comme partie de la distribution KDE, Évolution
 comme partie de Gnome, donc si vous êtes sous GNU/Linux, vous devriez
 utiliser votre gestionnaire de paquet favori.
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install kmail
 
 apt-get install evolution
-\end{verbatim}
+\end{lstlisting}
 
 Même remarque qu'auparavant pour ce qui est des installateurs graphiques
 : Synaptic et consorts installeront toutes les dépendances, y compris
@@ -306,16 +287,12 @@ Mac.
 
 \subsection{Thunderbird : Enigmail}\label{thunderbird-enigmail}
 
-\textbf{\emph{Le jour de la publication de cet article, la version 1.8.1
-d'Énigmail est publiée. Il est vivement recommandé de prendre cette
-version, bien plus intuitive et facile à prendre en main !}}
-
 Si vous utilisez Thunderbird, vous avez besoin d'Énigmail, qui est en
 fait une extension, un plugin du logiciel utilisé par Thunderbird pour
 gérer son interaction avec GPG.
 
-Les utilisateurs de Thunderbird peuvent suivre
-\href{http://lehollandaisvolant.net/tuto/gpg/\#i2}{ce tutoriel}, qui est
+Les utilisateurs de Thunderbird peuvent suivre le tutoriel du Hollandais Vollant
+\footnote{\url{http://lehollandaisvolant.net/tuto/gpg/\#i2}}, qui est
 complet et dont je m'inspire beaucoup. Toutefois je le trouve indigeste
 car très long.
 

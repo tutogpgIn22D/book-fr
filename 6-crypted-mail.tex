@@ -84,10 +84,8 @@ ceci :
 \end{verbatim}
 
 Cette empreinte est celle de la clé publique de \emph{Tuto-gpg @
-22decembre.eu}.\\C'est le même principe que les
-\href{http://fr.wikipedia.org/wiki/MD5}{sommes de contrôle MD5} des
-fichiers téléchargés sur internet - typiquement une iso de distribution
-Linux.
+22decembre.eu}.\\C'est le même principe que les sommes de contrôle MD5\footnote{D'ailleurs les sommes de contrôle MD5 sont encore utilisées par OpenPGP, sauf que l'algorithme MD5 est aujourd'hui considéré comme obsolète. Le sujet sera évoqué dans la suite du tutoriel. Vous pouvez en apprendre davantage sur \url{http://fr.wikipedia.org/wiki/MD5}.} des
+fichiers téléchargés sur internet - typiquement une iso de distribution Linux.
 
 Certaines personnes mettent aussi l'empreinte de leur clé gpg sur leur
 carte de visite, pour pouvoir les distribuer plus facilement.
@@ -105,8 +103,7 @@ Voici quelques adresses de serveurs :
 \item
   hkp://keyserver.ubuntu.com/
 \item
-  hkp://pool.sks-servers.net/ NB : vous voudrez sûrement visiter leur
-  \href{https://sks-keyservers.net/i/}{site web}.
+  hkp://pool.sks-servers.net/ \footnote{Ce serveur est en fait un pool de serveurs de clés distribué par round-robind DNS. C'est le \textit{serveur} de clé le plus utilisé aujourd'hui.}.
 \item
   hkp://pgp.mit.edu/
 \item

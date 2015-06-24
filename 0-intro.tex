@@ -1,4 +1,4 @@
-\chapter[Introduction]{Pourquoi vous devez utiliser GPG ?}
+\chapter{Introduction :Pourquoi vous devez utiliser GPG ?}
 
 Quand j'écris des courriels ou que je montre ma carte de visite, il y a
 des gens qui me demandent : c'est quoi GPG ? C'est quoi ce fichier en
@@ -7,16 +7,11 @@ pièce joint de votre courriel ?
 \begin{figure}[tbph]
 \centering
 \includegraphics[width=\linewidth]{images/visiting.jpeg}
-\caption[Des cartes de visites comportant une empreinte de clé GPG]{}
+\caption{Des cartes de visites comportant une empreinte de clé GPG}
 \end{figure}
 
-Je suis toujours aussi surpris qu'après les
-\href{http://fr.wikipedia.org/wiki/R\%C3\%A9v\%C3\%A9lations_d\%27Edward_Snowden}{révélations
-d'Edward Snowden} sur la surveillance de masse des services secrets
-américains (NSA, CIA\ldots{}), et les découvertes, chaque jour de
-l'étendue et des \href{http://www.lemonde.fr/pixels/article/2015/02/17/un-nouveau-logiciel-espion-de-la-nsa-mis-au-jour_4577707_4408996.html}{pouvoirs}
-des services secrets occidentaux - y compris français -, il y ait des
-gens (la \emph{majorité} des gens en fait, aussi triste que ça puisse
+Je suis toujours aussi surpris qu'après les révélations d'Edward 
+Snowden\footnote{\url{https://fr.wikipedia.org/wiki/Révélations_d'Edward_Snowden}} sur la surveillance de masse des services secrets américains (NSA, CIA\ldots{}), et les découvertes, chaque jour de l'étendue et des pouvoirs des services secrets occidentaux\footnote{\url{http://www.lemonde.fr/pixels/article/2015/02/17/un-nouveau-logiciel-espion-de-la-nsa-mis-au-jour_4577707_4408996.html}} - y compris français -, il y ait des gens (la \emph{majorité} des gens en fait, aussi triste que ça puisse
 paraître !) qui ne connaissent pas GPG !
 
 Je me suis donc décidé à publier ce puis un tutoriel au long court qui j'espère, vous permettront d'apprendre à l'utiliser correctement.
@@ -43,10 +38,8 @@ apprentissage et votre compréhension.
 
 PGP est un sigle pour \emph{Pretty Good Privacy}, \emph{Plutôt Bonne Vie Privée} en français.
 
-PGP est le logiciel originel, conçu par \href{http://philzimmermann.com/FR/background/index.html}{Philip Zimmermann}, dans le
-\href{http://openpgp.vie-privee.org/pourquoi.htm}{but explicite de
-défendre la vie privée, les libertés individuelles et plus largement la
-démocratie}.
+PGP est le logiciel originel, conçu par Philip Zimmermann\footnote{\url{http://philzimmermann.com/FR/background/index.html}}, dans le
+but explicite de défendre la vie privée, les libertés individuelles et plus largement la démocratie\footnote{\url{http://openpgp.vie-privee.org/pourquoi.htm}}.
 
 C'est à la base un outil permettant de signer et chiffrer sa correspondance électronique. En français, son mail ou son courriel.
 
@@ -57,16 +50,13 @@ C'est le logiciel lui-même qui fait ces opérations mathématiques.
 
 \subsection{Puis OpenPGP}\label{puis-openpgp}
 
-Puis l'IETF, a normalisé PGP et ça a donné le format de chiffrement
-\href{https://fr.wikipedia.org/wiki/OpenPGP}{OpenPGP}, qui garantit que
-les différents utilisateurs du format peuvent échanger grâce à ce même
-format d'échanges.
+Puis l'IETF, a normalisé PGP et ça a donné le format de chiffrement OpenPGP\footnote{\url{https://fr.wikipedia.org/wiki/OpenPGP}}, qui garantit que
+les différents utilisateurs du format peuvent échanger grâce à ce même format d'échanges.
 
 \subsection{Finalement est venu GPG}\label{finalement-est-venu-gpg}
 
-Ceci a permis à des développeurs libristes de concevoir un logiciel,
-\href{https://www.gnupg.org/}{GnuPG}, abrégé en GPG, implémentant le
-format OpenPGP.\\Autrement dit : grâce à OpenPGP, les utilisateurs de
+Ceci a permis à des développeurs libristes de concevoir un logiciel, GnuPG
+\footnote{\url{https://www.gnupg.org/}}, abrégé en GPG, implémentant le format OpenPGP.\\Autrement dit : grâce à OpenPGP, les utilisateurs de
 GnuPG et PGP peuvent correspondre ensemble sans problème.
 
 \section{Pourquoi l'utiliser ?}\label{pourquoi-lutiliser}
@@ -80,41 +70,29 @@ Vous avez une compétition de cuisine et voulez partager votre recette de la tar
 
 Vous voulez monter une entreprise, ou vous travaillez déjà, et souhaiter donc communiquer en toute sécurité avec vos associés ?
 
-Vous êtes \href{\{filename\}../nouveau-journalisme.md}{journaliste} et
-voulez communiquer de manière sécurisée avec vos sources ?\\Ce cas est
-particulier, puisqu'idéalement, vos sources doivent pouvoir, dès le
-départ, sans même vous connaître, communiquer avec vous de manière
-confidentielle !\\Il est à noter que ce fut le cas d'Edward Snowden : il
-a utilisé PGP et demandé à ses contacts de faire de même pour assurer
+Vous êtes journaliste et voulez communiquer de manière sécurisée avec vos sources ?\\Ce cas est
+particulier, puisqu'idéalement, vos sources doivent pouvoir, dès le départ, sans même vous connaître, communiquer avec vous de manière
+confidentielle !\\Il est à noter que ce fut le cas d'Edward Snowden : il a utilisé PGP et demandé à ses contacts de faire de même pour assurer
 des échanges sûrs.
 
-Certaines de ces raisons semblent futiles.\\Mais ce que \emph{Desperate
-Housewives}, et les gens autour de nous, nous ont bel et bien montré,
-c'est que, aussi futile que ce soit, quelqu'un peut néanmoins être assez
-motivé pour vouloir ouvrir votre courrier et dans ce cas, cette personne
-mettra aussi en œuvre les moyens les plus importants, et parfois de
-manière totalement disproportionnée.
+Certaines de ces raisons semblent futiles.\\Mais ce que \emph{Desperate Housewives}, et les gens autour de nous, nous ont bel et bien montré,
+c'est que, aussi futile que ce soit, quelqu'un peut néanmoins être assez motivé pour vouloir ouvrir votre courrier et dans ce cas, cette personne
+mettra aussi en œuvre les moyens les plus importants, et parfois de manière totalement disproportionnée.
 
 Mais passons à autre chose\ldots{}
 Ouuuuiiii\ldots{}\\
 
-\href{http://www.linformaticien.com/actualites/id/32860/google-lit-vos-mails-et-assume.aspx}{Google},
-\href{http://www.zdnet.fr/actualites/yahoo-lit-les-emails-de-ses-utilisateurs-quoi-de-neuf-doc-39791003.htm}{Yahoo}
-et \href{https://tosdr.org/\#microsoft}{Microsoft} (Live et Hotmail par exemple) lisent vos courriels pour faire du profilage !
+Google\footnote{\url{http://www.linformaticien.com/actualites/id/32860/google-lit-vos-mails-et-assume.aspx}},
+Yahoo\footnote{\url{http://www.zdnet.fr/actualites/yahoo-lit-les-emails-de-ses-utilisateurs-quoi-de-neuf-doc-39791003.htm}}
+et Microsoft\footnote{\url{http://www.numerama.com/magazine/33357-windows-10-microsoft-et-vos-donnees-privees-ce-que-vous-devez-savoir.html}} lisent vos courriels pour faire du profilage !
 
-Vous rappelez-vous de ce scandale, avec des
-\href{http://www.huffingtonpost.fr/2014/09/02/jennifer-lawrence-nue-piratage-internet-kate-upton-photos-celebgate_n_5745970.html}{photos
-de stars de cinéma volées} ?\\Si vous estimez que la reaction de ces
-stars (indignation devant les violations de leur vie privée) est
-normale, saine, pourquoi n'accordez-vous pas la même valeur à votre vie
-privée aussi ?
+Vous rappelez-vous de ce scandale, avec des photos de stars de cinéma volées\footnote{\url{http://www.huffingtonpost.fr/2014/09/02/jennifer-lawrence-nue-piratage-internet-kate-upton-photos-celebgate_n_5745970.html}} ?\\Si vous estimez que la reaction de ces stars (indignation devant les violations de leur vie privée) est
+normale, saine, pourquoi n'accordez-vous pas la même valeur à votre vie privée aussi ?
 
-Bonne nouvelle toutefois,
-\href{http://www.ginjfo.com/actualites/politique-et-economie/espionnage-nsa-depose-les-armes-devant-certaines-solutions-cryptage-20141230}{GPG
-est toujours sûr apparament} !
+Bonne nouvelle toutefois, GPG est toujours sûr apparament
+\footnote{\url{http://www.ginjfo.com/actualites/politique-et-economie/espionnage-nsa-depose-les-armes-devant-certaines-solutions-cryptage-20141230}} !
 
-D'ailleurs, pour vous donner une autre raison d'utiliser GPG : le mail,
-à la base, c'est du texte. Rien de plus simple à intercepter, lire,
+D'ailleurs, pour vous donner une autre raison d'utiliser GPG : le mail, à la base, c'est du texte. Rien de plus simple à intercepter, lire,
 détourner. En fait, envoyer un mail, c'est envoyer une carte postale !
 
 Ça va bien pour parler des photos du chat, mais très rapidement, ça
@@ -122,10 +100,8 @@ devient critique\ldots{} Non ?
 
 \section{C'est douloureux ?}\label{cest-douloureux}
 
-Disons que l'utilisation du chiffrement n'est pas forcement
-hyper-simple. Toutefois, je ne vois aucun moyen, ni
-\href{http://www.itespresso.fr/nsa-se-mobilise-casser-chiffrement-donnees-85704.html}{aucune
-raison sérieuse} de s'en passer.
+Disons que l'utilisation du chiffrement n'est pas forcement hyper-simple. Toutefois, je ne vois aucun moyen, ni
+aucune raison sérieuse de s'en passer.
 
 En mettant à disposition de tous un tutoriel perenne, en vous
 permettant, progressivement, de découvrir le fonctionnement d'OpenPGP,
@@ -153,5 +129,3 @@ problèmes.
 \end{quote}
 
 Il y a aussi \href{http://www.uzine.net/article128.html}{ceci}.
-
-Et plein d'autres\ldots{}
