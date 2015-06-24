@@ -1,103 +1,65 @@
 \documentclass[10pt,a4paper]{book}
+\usepackage[a4paper]{geometry}
 
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
-%\usepackage{amsfonts}
-%\usepackage{makeidx}
-\usepackage{graphicx, fancyhdr}
+
+\usepackage{titling}
+%\usepackage{showframe}
+\usepackage{graphicx}
+\usepackage{listings, multicol, color, fancyhdr,lastpage}
 \usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
-
-
-
-%\usepackage[explicit]{titlesec}
-%\usepackage{lmodern, marvosym, geometry, graphicx, multicol, lastpage, verbatim, ifthen, tikz}
-%\usepackage{tabularx, multicol, color, array, fancyhdr, verbatim, listings, alltt, enumitem}
 \usepackage[hyperindex=true,colorlinks=true,breaklinks=true,linkcolor=blue]{hyperref}
 
-
-\pagestyle{fancy}
-\renewcommand{\familydefault}{\sfdefault}
-
-
-%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-\title{Des chiffres et des lettres}
-
-\author{Stéphane 22Decembre Guedon}
-
+\title{\huge\bsc{Des chiffres et des lettres}}
+\author{Stéphane \bsc{22Decembre Guedon}}
 \date{13 mai 2015}
 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% fonte
+\renewcommand{\familydefault}{\sfdefault}
+
+\pretitle{\begin{center}}
+	
+\posttitle{
+	\newline
+		\Large\emph{Protéger ses communications en ligne\\et autres aspects de sa vie numérique\\}
+		\vspace{5mm}
+		\LARGE\emph{GnuPG et OpenPGP pour tous\\}
+	\end{center}
+		}
+
+\preauthor{\centering
+	    \vspace{5mm}
+		\includegraphics[width=0.9\textwidth]{./images/logo-gnupg}
+		\vspace{1cm}
+		\newline
+	}
+
+\postauthor{
+	 \vspace{5mm}\\
+		}
+
+\predate{\begin{center} version 1 du }
+	
+	
+\postdate{\end{center}}
+	
+
 \begin{document}
-\thispagestyle{empty}
-\makeatletter
-\begin{center}
-	{\Huge\textbf\@title}
-	
-	\vspace{0.3cm}
-	
-	{\Large\emph{Protéger ses communications en ligne et autres aspects de sa vie numérique}}
-	
-	\vspace{0.3cm}
-	
-	{\LARGE\emph{GnuPG et OpenPGP pour tous}}
-	
-	\vspace{1.6cm}
-	{\large Version du \@date}
-	\vspace{1.6cm}
-	
-	\includegraphics[width=0.9\textwidth]{./images/logo-gnupg}\\
-	\vspace{2.1cm}
-	%\includegraphics[width=250pt]{img/logos.pdf}
-\end{center}
+	%\makeatletter
+	\maketitle
 
-
-
-%\makeatother
-
-	\frontmatter
-	\chapter{Préambule}
-	
-		Ce document utilise les textes issus du tutoriel ou how-to GPG que j'ai écris. Il s'agit là de la version \textit{de base}, soit les fonctions que j'estime les plus importantes de GnuPG et OpenPG.
-		
-		Ce How-to peut être lu sur mon site internet ici… Je vous encourage vivement à le partager, le repartager, que ce soit pour la version en ligne (html) ou hors-ligne (le pdf que vous êtes en train de lire).
-		
-		Bien entendu, les textes ont été légèrement modifiés pour correspondre à la forme qui lui est donné ici, à savoir un mini livre.
-		
-		Le but avoué de ce document est d'encourager les utilisateurs d'internet, soit en fait une grosse partie de la population occidentale, à protéger leurs communications telles que courriels et messagerie instantanée.
-		
-		Au moment même de la rédaction de ce livre, une loi extrêmement dangereuse pour les libertés civiles est en cours d'adoption par le parlement et le gouvernement français.
-		
-		Le fichier support à ce document, à savoir le fichier pdf que vous lisez, est signé avec ma clé gpg ainsi que la clé gpg créée exprès pour les besoins de ce tutoriel.
-		
-		Les deux clés ont été incluses en pièces jointes au fichier pdf.
-	
-	Voici leurs empreintes:
-	
-		\begin{center}
-			30CF 1DA5 7E87 6BAA 730D E561 42E0 A02E F1C9 35A4
-		\end{center}
-		
-		\begin{center}
-			F6B2 DCE3 B6F6 A972 FF3A 1C9B 2041 3A8E 7F36 CE55
-		\end{center}
-	
-	Le texte de ce document (soit en fait, mon travail) est placé sous licence Creative Commons BY. J'ai utilisé des illustrations provenant de sources externes:
-	\begin{itemize}
-		\item le logo de GnuPG, sous licence CC-BY-SA
-		\item l'illustration de la gpg cheat sheet, sous licence CC-BY-SA
-		\item la bande dessinée de XKCD relavite à la force des mots de passe, sous licence CC BY-NC 2.5
-	\end{itemize}
-	
-	Les sources au format \LaTeX sont disponibles dans le dépot github … . La version actuelle est … commit signé avec ma clé gpg.
-	
+	%\frontmatter
+	\include{preambule-court}	
 	\tableofcontents
-	
 	\include{0-intro}
 	\include{1-alternatives}
-	
-	\mainmatter
-		
+	%\mainmatter
 	\include{2-install}
 	\include{3-logic}
 	\include{4-key-generate}	
