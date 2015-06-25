@@ -12,6 +12,27 @@
 \usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
 \usepackage[hyperindex=true,colorlinks=true,breaklinks=true,linkcolor=blue]{hyperref}
 
+\lstset{
+	language=bash,						% le language par défaut
+	title=\lstname,						% on donne le nom des fichiers inclus
+	basicstyle=\ttfamily\normalsize,	% la fonte de base: brute d'imprimerie
+	frame=leftline,	% une ligne à gauche
+	rulecolor=\color{black},	% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	framerule=2pt,
+	%framexleftmargin=10pt,
+	keywordstyle=\color{blue},	% keyword style
+	commentstyle=\color{gray},	% comment style
+	stringstyle=\color{mauve},	% string literal style
+	escapeinside={\%*}{*)},		% if you want to add a comment within your code
+	morekeywords={*,...},		% if you want to add more keywords to the set
+	morecomment=[l]{\#},
+	belowskip=10pt,
+	aboveskip=0pt,
+	xleftmargin=25pt,
+	belowcaptionskip=0pt,
+	abovecaptionskip=0pt
+	}
+
 \title{\huge\bsc{Des chiffres et des lettres}}
 \author{Stéphane \bsc{22Decembre Guedon}}
 \date{13 mai 2015}
