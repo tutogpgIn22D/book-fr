@@ -42,13 +42,15 @@ fonctionnalités.
 Kgpg est un élément de la suite KDE, qui s'utilise donc surtout avec
 Kmail et Kontact. De même Enigmail fonctionne avec Thunderbird.
 
-\emph{Il est à noter que les tablettes et téléphones Samsung avec
+\begin{notice}
+	Il est à noter que les tablettes et téléphones Samsung avec
 Android ont maintenant tous les outils GPG nécessaires. Le problème
-c'est que vous ne pouvez vraiment leur faire confiance.}
-
-\emph{C'est néanmoins un bon moyen pour faire votre initiation à GPG.
+c'est que vous ne pouvez vraiment leur faire confiance.\\
+\\
+C'est néanmoins un bon moyen pour faire votre initiation à GPG.
 Vous voudrez certainement recréer des clés après ça sur un vrai
-ordinateur.}
+ordinateur.
+\end{notice}
 
 Au passage, vous pouvez envisager, si vous êtes vraiment motivé,
 d'installer votre propre système de courriel.\\Ça devient accessible au
@@ -58,10 +60,11 @@ d'installation\footnote{\url{http://blog.chown.me/pourquoi-j-adore-openbsd.html}
 
 \section{Recommandations}\label{recommandations}
 
-\subsection{Remarque}
+\begin{notice}
 La plupart de ces recommandations sont d'ordre général. Il s'agit de ce
 qu'on pourrait appeler ``des pratiques de base saines pour votre
 ordinateur''.
+\end{notice}
 
 \subsection{Sécurité du courriel}
 En gros, il faut éviter le webmail, qui est une très mauvaise chose -
@@ -211,21 +214,16 @@ par contre \textbf{GPG Services}.
 
 \section{Un client couriel}\label{un-client-couriel}
 
-\begin{quote}
+\begin{notice}
 Je ne décrirais pas la configuration de la messagerie, des adresses
 courriels.\\Si vous êtes venus jusqu'ici, ce dont je vous félicite,
 c'est que vous êtes motivés pour apprendre/chercher la solution par
 vous-même et/ou que vous savez déjà configurer une adresse courriel.
-\end{quote}
 
-\begin{quote}
-Toutefois, on peut toujours me
-\href{\{filename\}../pages/contact-fr.md}{contacter} pour demander de
-l'aide et un tutoriel basique pour la configuration de la messagerie de
-Thunderbird (aisement transposable aux autres logiciels de courrier) est
-disponible
-\href{http://www.astucesinternet.com/modules/news/article.php?storyid=180}{ici}.
-\end{quote}
+Toutefois, on peut toujours me contacter\footnote{via l'adresse du tutoriel, ou aller sur \url{http://http://www.22decembre.eu/fr/contact.html}} pour demander de
+l'aide. Les tutoriels pour la configuration de la messagerie de
+Thunderbird (aisement transposable aux autres logiciels de courrier) sont légions sur le web.\footnote{\url{http://www.astucesinternet.com/modules/news/article.php?storyid=180} par exemple}.
+\end{notice}
 
 Bon, vous avez le logiciel de base installé, mais rien d'autre pour
 l'instant à priori. Prenez le client courriel de votre choix.
@@ -266,7 +264,7 @@ Même remarque qu'auparavant pour ce qui est des installateurs graphiques
 
 \subsection{Les autres}\label{les-autres}
 
-Il existe une version \href{https://windows.kde.org/}{Windows de KDE},
+Il existe une version Windows de KDE\footnote{\url{https://windows.kde.org/}},
 mais je n'ai jamais pris le temps de l'essayer.
 
 Sylpheed, client courriel disponible sous distributions Linux, Windows,
@@ -274,10 +272,10 @@ Mac et d'autres Unix.
 
 \section{Un gestionnaire de clés}\label{un-gestionnaire-de-cluxe9s}
 
-\begin{quote}
+\begin{notice}
 Rappel : Vous n'avez besoin que d'un seul de ces logiciels. Et très
 souvent le choix de tel ou tel logiciel dépend de votre environnement !
-\end{quote}
+\end{notice}
 
 \subsection{GPG Keychain sous Mac OS}\label{gpg-keychain-sous-mac-os}
 
@@ -299,12 +297,11 @@ car très long.
 \subsubsection{Première solution : le site web}\label{premiuxe8re-solution-le-site-web}
 
 L'installation est ici la même que pour l'installation d'un module
-Firefox : xpi.\\Il vous faut télécharger le plugin sur
-\href{https://www.enigmail.net/download/}{cette page} et bien sûr
-prendre la version correspondant à votre OS.\\Au passage, signalons
-comme l'indique bien
-\href{http://beta.babelzilla.org/projects/p/Enigmail/}{la page de
-traduction} qu'Énigmail est traduit dans de nombreuses langues, y
+Firefox : xpi.\footnote{Il vous faut télécharger le plugin sur
+\url{https://www.enigmail.net/download/} et bien sûr
+prendre la version correspondant à votre OS.} 
+Au passage, signalons comme l'indique bien
+la page de traduction\footnote{\url{http://beta.babelzilla.org/projects/p/Enigmail/}} qu'Énigmail est traduit dans de nombreuses langues, y
 compris français (90\%), mais pas danois, hélas.
 
 L'extension xpi s'installe comme suit : il faut démarrer Thunderbird,
@@ -343,12 +340,14 @@ voulez mettre à jour.
 Si vous souhaitez une autre version que celle des dépots, il vous faut
 la désinstaller au préalable.
 
-\textbf{\emph{Une seule version de ce logiciel par machine ! C'est, je
-pense, une mesure de sécurité.}}
+\begin{warning}
+Une seule version de ce logiciel par machine ! C'est, je
+pense, une mesure de sécurité.
+\end{warning}
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install enigmail
-\end{verbatim}
+\end{lstlisting}
 
 \emph{NB : Il n'y a pas de raison, si Debian a inclus Énigmail dans ses
 dépots que d'autres distributions GNU/Linux ne l'ai pas
@@ -365,9 +364,9 @@ Il y a de fortes chances, si vous êtes un fan de KDE comme moi que ces
 logiciels soient déjà installés. Mais sinon, comme précédemment, et
 suivant votre distribution :
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install kgpg kleopatra
-\end{verbatim}
+\end{lstlisting}
 
 Rappelez-vous que Kleopatra est aussi distribué dans l'installateur
 Gpg4win sous Windows.
@@ -378,6 +377,6 @@ Il y a Seahorse sous Gnome, mais je ne connais pas du tout. Mais je
 doute fortement qu'il soit très différent de Kgpg. Il est disponible
 sous Debian :
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install seahorse
-\end{verbatim}
+\end{lstlisting}
