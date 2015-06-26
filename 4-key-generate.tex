@@ -9,8 +9,7 @@ en fait une face privée et une face publique.
 Créer les clés prend juste quelques minutes et vous n'avez quasiment
 rien à faire. Donc s'il vous plait, prenez votre temps.}
 
-\section{À noter}\label{uxe0-noter}
-
+\begin{notice}
 S'il y a des gens inquiets: vous pouvez tout à fait utiliser une adresse
 bidon pour ce tutoriel. Après tout, c'est bien ce que je fais avec
 l'adresse du tuto.
@@ -18,6 +17,7 @@ l'adresse du tuto.
 Après cela, vous vous refaîtes des clés gpg avec votre vraie adresse, en
 suivant à nouveau le tutoriel, mais vous ne les envoyez pas ici. Pas de
 soucis !
+\end{notice}
 
 \section{Génération de la clé}\label{guxe9nuxe9ration-de-la-cluxe9}
 
@@ -63,13 +63,13 @@ La longueur de clé choisie va demander au \emph{générateur de hasard} de
 votre ordinateur une certaine quantité d'\emph{entropie}, quantité
 exprimée avec ce nombre en \emph{bits}.
 
-\begin{quote}
+\begin{notice}
 Je dois ici avouer ne pas comprendre vraiment le fondement profond de la
 chose.\\Dès que j'essaye de comprendre ces concepts d'entropie, de
 quantité d'entropie, je suis largué.\\En revanche, ce que je comprends
 bien, c'est que plus il y a d'entropie, plus la clé est forte et le
 chiffrement difficile à casser.
-\end{quote}
+\end{notice}
 
 Aujourd'hui, il est très recommandé de mettre 4096 bits. D'ailleurs je
 pense que les prochaines versions des logiciels OpenPGP verront
@@ -84,8 +84,7 @@ plus vous utilisez votre ordinateur (particulièrement les accès
 disques), plus vous générez l'entropie pour le générateur de
 hasard.\\L'idéal, c'est donc d'en profiter pour mettre à jour sa
 distribution (haute utilisation du disque dur) et d'aller jeter un coup
-d'oeil sur la dernière vidéo de chaton sur
-\href{https://vimeo.com/tag:cat}{vimeo}\ldots{}
+d'oeil sur la dernière vidéo de chaton sur vimeo\ldots{}
 
 \subsubsection{Durée de validité}\label{duruxe9e-de-validituxe9}
 
@@ -106,11 +105,10 @@ ou vingt caractères.
 
 Il existe plusieurs excellentes méthodes pour créer un bon mot de passe.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=\linewidth]{./images/password_strength.png}
 \caption[Recommandations pour un mot de passe fort, par XKCD (https://xkcd.com/936/)]{}
-\caption{}
-\label{fig:password_strength}
 \end{figure}
 
 \emph{Bonus pour les profs de français ou les gens vivants en pays
@@ -212,10 +210,7 @@ Vous pouvez alors me l'envoyer en pièce jointe d'un courriel à
 \emph{Tuto-gpg @ 22decembre.eu}. Ni plus, ni moins.
 
 \emph{NB : Kmail (client courriel de KDE), propose également dans son menu }\textbf{Joindre\ldots{}}* de mettre sa clé publique en pièce
-jointe du courriel. Tout simple.*
-
-Voila, vous avez fait votre exercice ! Venez lire la
-\href{\{filename\}5-sign-mail-fr.md}{suite}.
+jointe du courriel. Tout simple.
 
 \section{D'autres liens}\label{dautres-liens}
 
