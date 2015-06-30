@@ -1,0 +1,49 @@
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+%\usepackage{showframe}
+\usepackage{graphicx}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\newtcolorbox{warning}{colback=red!5!white, colframe=red!75!black, fonttitle=\bfseries, title='Attention !'}
+\newtcolorbox{notice}{colback=blue!5!white, colframe=blue!75!black, fonttitle=\bfseries, title=Notice}
+
+\usepackage{listings, multicol, color, fancyhdr,lastpage}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage[hyperindex=true,colorlinks=true,breaklinks=true,linkcolor=blue]{hyperref}
+
+\usepackage[font={large,itshape}]{quoting}
+
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[LO,RE]{}
+
+\lstset{
+	language=bash,						% le language par défaut
+	title=\lstname,						% on donne le nom des fichiers inclus
+	basicstyle=\ttfamily\normalsize,	% la fonte de base: brute d'imprimerie
+	frame=leftline,	% une ligne à gauche
+	rulecolor=\color{black},	% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	framerule=2pt,
+	%framexleftmargin=10pt,
+	keywordstyle=\color{blue},	% keyword style
+	commentstyle=\color{gray},	% comment style
+	stringstyle=\color{mauve},	% string literal style
+	escapeinside={\%*}{*)},		% if you want to add a comment within your code
+	morekeywords={*,...},		% if you want to add more keywords to the set
+	morecomment=[l]{\#},
+	belowskip=10pt,
+	aboveskip=0pt,
+	xleftmargin=25pt,
+	belowcaptionskip=0pt,
+	abovecaptionskip=0pt
+	}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% fonte
+\renewcommand{\familydefault}{\sfdefault}
