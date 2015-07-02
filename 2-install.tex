@@ -35,7 +35,7 @@ Pour pouvoir utiliser GPG, il vous faut \ldots{}
 
 Très souvent, les gestionnaires de clés sont des logiciels additifs aux
 clients courriels, des extensions. Ils ont pour la plupart les mêmes
-options de base.\\Le choix de tel ou tel environnement s'avère donc
+options de base. Le choix de tel ou tel environnement s'avère donc
 trivial, une affaire de goût et d'esthétique plutôt que de
 fonctionnalités.
 
@@ -53,9 +53,9 @@ ordinateur.
 \end{notice}
 
 Au passage, vous pouvez envisager, si vous êtes vraiment motivé,
-d'installer votre propre système de courriel.\\Ça devient accessible au
+d'installer votre propre système de courriel. Ça devient accessible au
 non-informaticien, grâce à YunoHost \footnote{\url{https://yunohost.org/}} par
-exemple.\\Ou dans une autre philosophie, OpenBSD, très simple
+exemple. Ou dans une autre philosophie, OpenBSD, très simple
 d'installation\footnote{\url{http://blog.chown.me/pourquoi-j-adore-openbsd.html}}, mais un poil difficile à prendre en main. Toutefois, pas plus difficile, de base, qu'une Debian.
 
 \section{Recommandations}\label{recommandations}
@@ -78,24 +78,24 @@ lus par une autre personne que le destinataire légitime.
 
 \subsection{Sécurité des logiciels}
 Il faut également éviter de récupérer des logiciels sur des sites tiers
-comme 01net et telecharger.com.\\Il est plutôt recommandé d'aller voir
+comme 01net et telecharger.com. Il est plutôt recommandé d'aller voir
 le site web du concepteur du logiciel - tout en restant prudent\footnote{\url{http://cyrille-borne.com/article398/le-site-de-confiance-c-est-termine}}, ou un site officiel, comme le site web d'Apple pour le cas d'un logiciel pour Mac
 par exemple.
 
 Lorsque vous pouvez utiliser un logiciel libre ou open-source plutôt
 qu'un logiciel propriétaire, faîtes le. C'est d'autant plus important
-dans le cadre de protocoles critiques (sécurité\ldots{}).\\En effet,
+dans le cadre de protocoles critiques (sécurité\ldots{}). En effet,
 avec un code en libre accès, n'importe qui peut vérifier la qualité du
-code, garantir l'absence de portes dérobées, de pratiques douteuses.\\Un
+code, garantir l'absence de portes dérobées, de pratiques douteuses. Un
 code source ouvert (\emph{opensource}) signifie donc que vous pouvez lui
 faire confiance pour \emph{vous protéger, vous et votre vie privée} ! Et
 si vraiment vous êtes paranoïaque (c'est votre droit) alors vous pouvez
 prendre des cours de code, puis faire vous même cette vérification !
 
 Lors de l'installation d'un logiciel, ne faîtes pas «entrée» à tout va.
-Regardez les options.\\Il est fréquent qu'un installateur vous propose
+Regardez les options. Il est fréquent qu'un installateur vous propose
 une barre d'outils ou autre, que vous n'avez pas demandé, et dont vous
-n'avez pas besoin.\\Ces micro-ajouts permanents sont source de
+n'avez pas besoin. Ces micro-ajouts permanents sont source de
 ralentissements multiples, et contiennent parfois des logiciels espions.
 
 Certains auteurs de logiciels signent leurs binaires (le fichier à
@@ -109,6 +109,12 @@ SPF a écrit un guide pour la navigation internet plus sûre\footnote{\url{http:
 Genma (un fervent partisan de l'utilisation des outils de chiffrement) a son guide d'hygiène numérique\footnote{\url{http://genma.free.fr/?Petit-guide-d-hygiene-numerique}} \footnote{\url{https://github.com/genma/Conference_Guide_d_hygiene_numerique/blob/master/Genma_Petit_Guide_d_hygiene_numerique.pdf?raw=true}}.
 
 \section{GPG}\label{gpg}
+
+Comme je l'ai écris dans l'introduction, \emph{OpenPGP} est une norme décrivant le protocole, soit en fait l'ensemble de ce que doit faire le logiciel et ses composants (signatures, chiffrements, algorithmes, formats de messages…). \emph{GPG} ou \emph{GnuPG}, est un logiciel libre conçu suivant cette spécification.\\
+\\
+Je peux parler indifférement de clé \emph{GPG} ou \emph{OpenPGP}, puisqu'en l'occurence, les clés créées par \emph{GPG} doivent belles et bien correspondre au standard \emph{OpenPGP}.\\
+\\
+Sinon, quand j'utilise le terme \emph{OpenPGP}, je fais réference au protocole, donc, pour ce qui vous concerne, à la manière d'utiliser vos clés. Quand j'utilise \emph{GPG}, alors je parle du logiciel lui-même.
 
 \subsection{Linux and co}\label{linux-and-co}
 
@@ -181,7 +187,7 @@ Les windowsiens, on vous facilite la vie décidément !
 \subsection{MacOS}\label{macos}
 
 Je n'ai pas de Mac sous la main. Mais Thunderbird est disponible sous
-Mac et vous pouvez donc l'utiliser.\\Apparemment
+Mac et vous pouvez donc l'utiliser. Apparemment
 le client courriel natif de Mac supporte également le chiffrement\footnote{\url{http://www.gbronner.net/mail/GPGMacOSX.html}}.
 
 Vous avez besoin, des outils de chiffrements Gpg pour Mac. Téléchargez donc la suite
@@ -216,13 +222,11 @@ par contre \textbf{GPG Services}.
 
 \begin{notice}
 Je ne décrirais pas la configuration de la messagerie, des adresses
-courriels.\\Si vous êtes venus jusqu'ici, ce dont je vous félicite,
+courriels. Si vous êtes venus jusqu'ici, ce dont je vous félicite,
 c'est que vous êtes motivés pour apprendre/chercher la solution par
 vous-même et/ou que vous savez déjà configurer une adresse courriel.
 
-Toutefois, on peut toujours me contacter\footnote{via l'adresse du tutoriel, ou aller sur \url{http://http://www.22decembre.eu/fr/contact.html}} pour demander de
-l'aide. Les tutoriels pour la configuration de la messagerie de
-Thunderbird (aisement transposable aux autres logiciels de courrier) sont légions sur le web.\footnote{\url{http://www.astucesinternet.com/modules/news/article.php?storyid=180} par exemple}.
+Toutefois, on peut toujours me contacter\footnote{via l'adresse du tutoriel, ou aller sur \url{http://http://www.22decembre.eu/fr/contact.html}} pour demander de l'aide. Les tutoriels pour la configuration de la messagerie de Thunderbird (aisement transposable aux autres logiciels de courrier) sont légions sur le web.\footnote{\url{http://www.astucesinternet.com/modules/news/article.php?storyid=180} par exemple}.
 \end{notice}
 
 Bon, vous avez le logiciel de base installé, mais rien d'autre pour
