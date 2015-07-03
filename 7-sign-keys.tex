@@ -7,18 +7,14 @@ lu ce tutoriel, et pour cela, il faut que vous puissiez signer des clés.
 \section{Signer des clés\ldots{}}\label{signer-des-cluxe9s}
 
 Oui, avec gpg, on peut signer des courriels, des fichiers, mais aussi
-des clés gpg !
+des clés gpg !\\
 
-\emph{Délicieusement récursif}
+\emph{Délicieusement récursif}\\
 
 Lorsque vous signez une clé, vous accordez un certain crédit à celle-ci,
 et vous l'indiquez également à tous ceux qui récupéreront votre
-signature.
-
-La signature d'une clé indique en fait que vous considérez que le
-propriétaire de cette clé est bien légitime.
-
-On va parler, là de \emph{cercle de confiance immédiat} (CCI pour
+signature. La signature d'une clé indique en fait que vous considérez que le
+propriétaire de cette clé est bien légitime. On va parler, là de \emph{cercle de confiance immédiat} (CCI pour
 résumer): ce sont toutes les personnes que vous avez rencontré, dont
 \textbf{vous} avez vérifié l'identité et signé la clé.
 
@@ -29,34 +25,24 @@ notions ci dessous.
 \section{Un problème d'identité}\label{un-probluxe8me-didentituxe9}
 
 On va prendre un exemple: quelqu'un se présente pour faire signer sa
-clé. Appelons le John.
-
-Vous devez d'abord vérifier que John est bien le propriétaire de cette
+clé. Appelons le John. Vous devez d'abord vérifier que John est bien le propriétaire de cette
 clé, et pour se faire, vérifier avec lui l'empreinte de la clé.
 
 Vous devez ensuite vérifier que John est bien qui il prétend être. Un
 coup d'oeil (soigneux) à ses papiers d'identité vous le
-confirmera\ldots{} mais pas seulement !\\Car l'identité, c'est bien plus
+confirmera, mais pas seulement ! Car l'identité, c'est bien plus
 qu'un simple bout de carton plastifié, fut-il protégé avec des encres
-spéciales\ldots{}
-
-L'identité, c'est aussi les diverses fonctions qu'on occupe: trésorier
+spéciales. L'identité, c'est aussi les diverses fonctions qu'on occupe: trésorier
 d'une association, blogueur plus ou moins anonyme, présence sur des
-réseaux sociaux.
-
-Tout ce qui renforce la confiance dans l'identité qu'une personne nous
-indique peut être vérifié.
-
-Une fois ces divers points validés, vous êtes à peu près sûr qu'il
+réseaux sociaux. Tout ce qui renforce la confiance dans l'identité qu'une personne nous
+indique peut être vérifié. Une fois ces divers points validés, vous êtes à peu près sûr qu'il
 s'agit bien de la bonne clé et de la bonne personne. Vous pouvez donc
 signer sa clé.
 
 \section{Confiance}\label{confiance}
 
 En signant une clé, vous accordez également un certain niveau de
-confiance dans son propriétaire.
-
-Ce sont deux choses liées mais néanmoins distinctes, et il est important
+confiance dans son propriétaire. Ce sont deux choses liées mais néanmoins distinctes, et il est important
 de le comprendre.
 
 Il y a cinq niveaux de confiance différents:
@@ -84,13 +70,8 @@ Par exemple, vous pouvez avoir vérifié soigneusement la clé d'un membre
 de votre famille, un cousin mettons. Vous avez donc absolument confiance
 dans \textbf{\emph{cette}} clé !
 
-Mais par contre, vous pensez que votre cousin n'est pas encore bien rodé
-avec OpenPGP. Peut-être qu'il signe un peu n'importe qui, ou qu'il
-accorde une confiance excessive.
-
-Vous n'avez donc aucune confiance dans son CCI.
-
-Donc vous signez sa clé, mais avec une confiance nulle.
+Mais par contre, vous pensez que votre cousin n'est pas encore bien rodé avec OpenPGP. Peut-être qu'il signe un peu n'importe qui, ou qu'il
+accorde une confiance excessive. Vous n'avez donc aucune confiance dans son CCI. Donc vous signez sa clé, mais avec une confiance nulle.
 
 Et cette confiance nulle est quelque chose que vous pouvez (\emph{devez}
 !) indiquer sans honte ni crainte. Pour ce faire, le niveau de confiance
@@ -103,9 +84,7 @@ d'opinion.}}
 
 Plus vous respecterez ces diverses considérations, plus votre propre
 jugement sera respecté par d'autres, en particulier des gens que vous
-connaissez bien.
-
-Et donc plus votre CCI prendra, lui une valeur haute également.
+connaissez bien. Et donc plus votre CCI prendra, lui une valeur haute également.
 
 Pour ma part, je pense qu'on devrait signer avec une confiance partielle
 par défaut, et réserver la confiance totale aux gens dont on connaît le
@@ -123,21 +102,19 @@ votre LUG.
 \subsection{Arthur}\label{arthur}
 
 Arthur vous explique qu'il débute dans l'utilisation de GPG et souhaite
-donc se construire une toile de confiance. \emph{Ok}.\\Vous vérifiez
+donc se construire une toile de confiance. \emph{Ok}. Vous vérifiez
 correctement son identité et il fait de même avec vous. Puis, chez vous,
 vous signez sa clé, puisque vous l'avez vérifiée.
 
 En revanche vous lui accordez une confiance nulle, car vous estimez que
-sa pratique de Gpg est encore trop récente.
-
-Cette confiance nulle ne vous empêche pas, un mois plus tard, lors d'une
+sa pratique de Gpg est encore trop récente. Cette confiance nulle ne vous empêche pas, un mois plus tard, lors d'une
 autre rencontre, de lui demander comment il gère son trousseau de clé,
 de constater son sérieux et d'élever son niveau de confiance.
 
 Cette confiance nulle n'empêche pas non plus cette personne de vous
-accorder un jugement haut ou bas également.\\Et les signatures d'autres
+accorder un jugement haut ou bas également. Et les signatures d'autres
 personnes sur sa clé s'ajoute à la votre. Signatures peut-être plus
-positives !
+positives !\\
 
 \emph{Il ne faut pas que vous vous sentiez honteux ou irrespectueux
 d'indiquer une confiance basse à Arthur.}
@@ -145,10 +122,8 @@ d'indiquer une confiance basse à Arthur.}
 \subsection{Miriam}\label{miriam}
 
 Miriam vous explique qu'elle est développeuse Debian. Vous vérifiez son
-identité et sa clé.\\Chez vous, vous vérifiez également ses dires au
-sujet de Debian et vous constatez qu'elle a bien dit la vérité.
-
-Donc vous signez sa clé, et vous lui accordez une confiance totale car
+identité et sa clé. Chez vous, vous vérifiez également ses dires au
+sujet de Debian et vous constatez qu'elle a bien dit la vérité. Donc vous signez sa clé, et vous lui accordez une confiance totale car
 vous savez que les dev' Debian utilisent beaucoup GPG et doivent
 respecter un certain sérieux.
 
@@ -156,16 +131,14 @@ respecter un certain sérieux.
 
 Greg vous indique qu'il utilise très régulièrement Gpg. Après avoir
 vérifié sa clé, vous la signez, avec une confiance
-partielle.\\Simplement parce que vous ne le connaissez pas, mais vous
+partielle. Simplement parce que vous ne le connaissez pas, mais vous
 voyez Greg comme quelqu'un de sérieux. Sans plus.
 
 \subsection{Karolina}\label{karolina}
 
 Karolina vous explique qu'elle a adopté un système de signature très
 précis décrit avec beaucoup de détails dans un document disponible sur
-son blog (on parle là de \emph{politique de signatures}).
-
-Vous trouvez sa démarche très juste et décidez de lui accorder une
+son blog (on parle là de \emph{politique de signatures}). Vous trouvez sa démarche très juste et décidez de lui accorder une
 confiance totale, précisément à cause de ce système de signatures dont
 vous estimez le fonctionnement très équilibré.
 
@@ -182,25 +155,21 @@ lui aussi avec une confiance partielle.
 
 Vous avez mis une confiance complète en Miriam. C'est comme si vous
 aviez fait entrer tous ses contacts dans votre cercle de confiance à
-vous.\\Et c'est Miriam qui a défini si oui ou non vous pouvez faire
+vous. Et c'est Miriam qui a défini si oui ou non vous pouvez faire
 confiance dans telle ou telle personne que vous n'avez jamais rencontré
-- puisque vous avez confiance dans le jugement de Miriam.\\Si, donc,
+- puisque vous avez confiance dans le jugement de Miriam. Si, donc,
 elle a mis elle-même quelqu'un d'autre en confiance totale, alors cette
 troisième se retrouve à nouveau \emph{de facto} dans votre cercle de
-confiance \emph{étendu}.
-
-Seulement, et c'est bien important, il ne \emph{faut pas que
-}\textbf{vous}* signiez* une des clés signées par Miriam sans avoir
-rencontré la/le propriétaire de cette clé.\\Miriam l'a fait. Donc la clé
+confiance \emph{étendu}. Seulement, et c'est bien important, il ne \emph{faut pas que
+\textbf{vous} signiez} une des clés signées par Miriam sans avoir
+rencontré la/le propriétaire de cette clé. Miriam l'a fait. Donc la clé
 qu'elle a signée sera reconnue comme valide par votre gestionnaire de
-clés.\\D'ailleurs pourquoi signeriez vous une clé sans avoir rencontré
+clés. D'ailleurs pourquoi signeriez vous une clé sans avoir rencontré
 la personne ?
 
 Gpg va déterminer par un algorithme jusqu'à quel point vous pouvez faire
 confiance à telle clé, que vous n'avez pas signé, à travers le mécanisme
-de la toile de confiance.
-
-Par défaut, Gpg n'ira pas plus loin que cinq cercles de confiance. Et il
+de la toile de confiance. Par défaut, Gpg n'ira pas plus loin que cinq cercles de confiance. Et il
 faut trois signatures avec une confiance partielle, ou une signature
 avec une confiance complète pour qu'une clé soit valide.
 
@@ -212,33 +181,24 @@ considérée avec sérieux.
 Par exemple, les opinions politiques, religieuses, son origine, son
 sexe, sa couleur de peau ni même votre proximité sentimentale (ami,
 membre de la famille\ldots{}) avec le propriétaire de la clé n'ont rien
-à voir ici.\\Seul compte le sérieux qu'il accorde à son CCI.
+à voir ici. Seul compte le sérieux qu'il accorde à son CCI.
 
 Si vous rencontrez quelqu'un qui vous explique qu'il signe des gens
 d'une manière très précise, avec une politique de signature détaillée,
 vous pouvez être admiratif de son sérieux et décider de lui accorder une
-confiance totale.\\Puis au cours de la discussion, vous vous rendez
+confiance totale. Puis au cours de la discussion, vous vous rendez
 compte que c'est un pédophile néonazi pronnant l'eugénisme et mangeant
 des chatons au petit-déjeuner avec de la sauce soja, vous \emph{devriez
 quand même} signer sa clé !
-
-%\href{http://giphy.com/gifs/cat-black-and-white-food-S4IWCPAjhbzUc}{\includegraphics{http://i.giphy.com/S4IWCPAjhbzUc.gif}}
 
 Bien sûr, vous le dénoncer à la police aussi sec, mais les deux actions
 sont compatibles.
 
 \subsection{Quelle est ma responsabilité dans tout ça ?}\label{quelle-est-ma-responsabilituxe9-dans-tout-uxe7a}
 
-Il s'agit donc bien d'un système, d'un réseau de confiance
-\emph{relative}.
+Il s'agit donc bien d'un système, d'un réseau de confiance \emph{relative}.
 
-Il n'y a pas d'autorité centrale de type étatique qui indique quelle
-identité est vraie ou fausse.
-
-C'est vous qui devez estimer quelle confiance vous accordez et à qui
-vous l'accordez.
-
-Ne soyez toutefois pas effrayé d'une telle responsabilité !
+Il n'y a pas d'autorité centrale de type étatique qui indique quelle identité est vraie ou fausse. C'est vous qui devez estimer quelle confiance vous accordez et à qui vous l'accordez. Ne soyez toutefois pas effrayé d'une telle responsabilité !
 
 Le fonctionnement du réseau est démocratique: si vous attribuez un
 mauvais degré de confiance à un utilisateur, votre ``vote'' sera
@@ -261,16 +221,13 @@ laquelle nous faisons confiance pour valider les clés.
 \section{Tromperies ?}\label{tromperies}
 
 \subsection{Que faire si quelqu'un tente de me tromper en me faisant
-signer une fausse clé
-?}\label{que-faire-si-quelquun-tente-de-me-tromper-en-me-faisant-signer-une-fausse-cluxe9}
+signer une fausse clé ?}\label{que-faire-si-quelquun-tente-de-me-tromper-en-me-faisant-signer-une-fausse-cluxe9}
 
 Déjà, il faut bien voir qu'en signant une clé, vous validez aussi une
 adresse courriel. Donc c'est aussi l'adresse courriel qu'il s'agit de
-vérifier.
-
-Et le plus simple dans ce cas est que la personne vous envoie un
+vérifier. Et le plus simple dans ce cas est que la personne vous envoie un
 courriel signé depuis cette adresse. (Il peut le faire quelques heures
-plus tard, ce n'est pas un soucis).\\De cette façon, vous êtes sûr que
+plus tard, ce n'est pas un soucis). De cette façon, vous êtes sûr que
 vous signiez la clé associée à cette adresse courriel, et qu'elle
 appartient à la personne que vous avez rencontré.
 
@@ -280,25 +237,21 @@ C'est toutefois un poil lourd comme procédure. À vous de voir.
 connaît pas ! Comment être sûr qu'on récupère la bonne clé
 ?}\label{il-peut-arriver-quon-veuille-uxe9crire-uxe0-quelquun-quon-ne-connauxeet-pas-comment-uxeatre-suxfbr-quon-ruxe9cupuxe8re-la-bonne-cluxe9}
 
-C'est le rôle de la toile de confiance, décrite au dessus.
-
-Si vous souhaitez écrire à Valentina, et que des gens mal-intentionnés
+C'est le rôle de la toile de confiance, décrite au dessus. Si vous souhaitez écrire à Valentina, et que des gens mal-intentionnés
 ont crée une ou des fausse(s) clé(s) qu'ils ont envoyés sur les serveurs
 de clés, comment reconnaître la bonne ?
 
 Il y a de fortes chances que la clé de Valentina soit celle qui comporte
-le plus de signatures.\\Et, très important, plus ces signatures viennent
+le plus de signatures. Et, très important, plus ces signatures viennent
 de personnes diverses (de nationalités, de fonctions diverses\ldots{}),
 plus la clé sera sûre !
 
 Il est par exemple très facile de créer des clés avec vingt signatures
-dessus.
-
-Il est par contre assez difficile de créer une clé avec une ou deux
+dessus. Il est par contre assez difficile de créer une clé avec une ou deux
 \emph{fausses} signatures de dev' Debian. Or il est très facile
-d'obtenir la signature d'un dev' Debian!\\Non pas que ce soient des gars
+d'obtenir la signature d'un dev' Debian! Non pas que ce soient des gars
 ou des filles \emph{faciles}. Mais ils sont nombreux et éparpillés un
-peu partout.\\Si vous habitez une grande ville occidentale, il est
+peu partout. Si vous habitez une grande ville occidentale, il est
 probable que vous ayez \emph{un dev' Debian à portée de main} et qu'il
 signera votre clé (en suivant sa politique de signature) si vous
 l'invitez pour une bière dans un bar.
@@ -312,28 +265,18 @@ Et c'est donc cette dernière clé que vous utiliserez en cas de doute !
 
 \section{Exercice}\label{exercice}
 
-Bon, c'est bon, vous pigez le truc de la toile de confiance ?
-
-Ne vous inquiétez pas, vous aurez d'autres articles qui donneront
-d'autres détails. Et vous pouvez toujours revenir ici lire encore et
-encore cet article.
-
-Je vais vous demander pour l'exercice du jour, de signer la clé du
+Bon, c'est bon, vous pigez le truc de la toile de confiance ? Je vais vous demander pour l'exercice du jour, de signer la clé du
 tutoriel, d'y mettre la confiance qui vous paraît correcte, puis de me
 l'envoyer par courriel.
 
 Nous sommes bien d'accord qu'il ne faut pas faire cela normalement,
-puisque qu'on ne s'est pas rencontré.
-
-C'est la raison pour laquelle j'ai indiqué dans un des articles que la
+puisque qu'on ne s'est pas rencontré. C'est la raison pour laquelle j'ai indiqué dans un des articles que la
 clé du tutoriel ne sera utilisée que pour les besoins du tutoriel.
 
 \subsection{Donc, comment qu'on fait ?}\label{donc-comment-quon-fait}
 
 Dans votre gestionnaire de clés, vous devez sélectionner la clé en
-question, puis l'option \textbf{\emph{Signer}}.
-
-Le logiciel vous demandera quelle confiance vous souhaitez accorder à
+question, puis l'option \textbf{\emph{Signer}}. Le logiciel vous demandera quelle confiance vous souhaitez accorder à
 cette clé. Si vous avez plusieurs clés privées, il vous sera demandé
 avec laquelle vous souhaitez signer.
 
@@ -365,9 +308,4 @@ d'autres signatures.
 
 Ceci ne change pas la signification de votre signature et ma description
 reste valable: la confiance accordée indique à quel point vous estimez
-le propriétaire de la clé capable d'entretenir son CCI.
-
-C'est donc ce niveau de confiance que vous devez indiquer.
-
-Ces logiciels ont par exemple une ergonomie trompeuse. Si vous avez des
-questions, n'hésitez pas à lire et relire cet article ou à m'écrire.
+le propriétaire de la clé capable d'entretenir son CCI. C'est donc ce niveau de confiance que vous devez indiquer.

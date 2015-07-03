@@ -32,20 +32,15 @@ La base du fonctionnement du réseau Bitmessage lui-même est compréhensible. M
 \subsection{Un petit truc étrange, une réflexion, comme ça\ldots{}}\label{un-petit-truc-uxe9trange-une-ruxe9flexion-comme-uxe7a}
 
 Il y a également un truc qui me chiffonne, outre l'aspect obscur, non-écologique, non-efficient au plan énergétique : le protocole
-Bitmessage est conçu pour noyer les communications chiffrées dans le flot des données P2P bit-torrent.\\Ainsi, soit disant, la NSA (qui est
-typiquement l'organisme auquel les concepteurs du protocole tentent d'échapper) ne verrait pas ce flot de données.
-
-Mais justement, la NSA a maintenant connaissance d'un protocole de communications sécurisé utilisé par des hackers de haut-niveau !\\Enfin
+Bitmessage est conçu pour noyer les communications chiffrées dans le flot des données P2P bit-torrent. Ainsi, soit disant, la NSA (qui est
+typiquement l'organisme auquel les concepteurs du protocole tentent d'échapper) ne verrait pas ce flot de données. Mais justement, la NSA a maintenant connaissance d'un protocole de communications sécurisé utilisé par des hackers de haut-niveau ! Enfin
 du moins, elle doit être au courant : elle lit des courriels, visite les sites web et les forums\ldots{}
 
 On \emph{doit} assumer qu'elle est au courant ! Donc quelqu'un a conçu
 un protocole de communications dans le but d'échapper à la NSA, et ce
 protocole envoie en permanence \emph{tous} les messages à \emph{tout} le
-réseau.
-
-Quoi de plus facile pour la NSA (et pour tous les autres maintenant) de
-se créer une ou plusieurs adresses Bitmessage, moissoner le flux
-indistinctement, et tenter de casser le code de chiffrement,
+réseau. Quoi de plus facile pour la NSA (et pour tous les autres maintenant) de
+se créer une ou plusieurs adresses Bitmessage, moissoner le flux indistinctement, et tenter de casser le code de chiffrement,
 puisqu'apparemment, c'est ce qu'elle fait déjà \footnote{\url{http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html} - lien en anglais} !
 
 Le code de Bitmessage repose, en partie sur SSL/TLS, une technologie commune et répandue, sur laquelle tout le monde travaille. Pas le plus
@@ -62,17 +57,12 @@ Je préfère donc utiliser GPG plutôt que Bitmessage. Le courriel est
 légitime, je n'ai pas de raison de le cacher - même si je comprends les
 arguments de ceux qui le veulent, entre autre cacher \emph{à qui on écrit}.
 
-Utiliser Bitmessage me marque automatiquement comme un \emph{hacker} de
-haut vol, ce que je ne suis pas. Tout juste puis-je et souhaite
-prétendre au status de \emph{petit} hacker ou de \emph{padawan}\ldots{}
-
-En utilisant Bitmessage, j'encourage des gens à surveiller mon courriel
-et à tenter de le lire.
-
-Au contraire, en écrivant des courriels signés et/ou chiffrés, j'assume
+Utiliser Bitmessage me marque automatiquement comme un \emph{hacker} de haut vol, ce que je ne suis pas. Tout juste puis-je et souhaite
+prétendre au status de \emph{petit} hacker ou de \emph{padawan}. En utilisant Bitmessage, j'encourage des gens à surveiller mon courriel
+et à tenter de le lire. Au contraire, en écrivant des courriels signés et/ou chiffrés, j'assume
 ma correspondance, et en même temps je la protège, ce qui est on ne peut
 plus légitime. Et comme c'est toujours du courriel, ça incite mes
-contacts à utiliser GPG\ldots{}
+contacts à utiliser GPG.
 
 Et si quelqu'un s'amuse à décrypter mon courriel, il découvrira alors
 probablement mes échanges avec mon amie lesbienne ou mes propositions de
@@ -91,13 +81,9 @@ Et faire chier les gens qu'on n'aime pas dès le matin, c'est vraiment gratifian
 \section{Les autres systèmes de chiffrement classiques}\label{les-autres-systuxe8mes-de-chiffrement-classiques}
 
 On peut chiffrer et authentifier son courrier avec SSL/TLS, par le biais
-du format S/Mime. Certaines entités fournissent des certificats personnels gratuitement.
-
-C'est le cas de DanID qui fournit le système d'authentification NemID, permettant d'accéder aux sites bancaires et gouvernementaux danois. Les
+du format S/Mime. Certaines entités fournissent des certificats personnels gratuitement. C'est le cas de DanID qui fournit le système d'authentification NemID, permettant d'accéder aux sites bancaires et gouvernementaux danois. Les
 certificats fournis par NemID sont valides pour signer et chiffrer du courrier, et s'authentifier sur certains sites web, notamment
-DBA, le Bon Coin danois, mais pas pour sécuriser son site web - hélas.
-
-En apparence, ces certificats sont donc une bonne chose pour sécuriser son courrier (les certificats de NemID sont un premier pas en avant vers
+DBA, le Bon Coin danois, mais pas pour sécuriser son site web - hélas. En apparence, ces certificats sont donc une bonne chose pour sécuriser son courrier (les certificats de NemID sont un premier pas en avant vers
 l'identité virtuelle des citoyens après tout). Mais SSL et TLS sont assez sujets à critiques dernièrement, et la NSA (et d'autres agences de
 renseignement certainement) a déjà cassé nombre de ses algorithmes apparemment.
 
@@ -117,7 +103,7 @@ Pour le courriel, je pense qu'il vaut mieux utiliser un outil conçu pour ça, �
 \section{Retour à GPG}\label{retour-uxe0-gpg}
 
 GPG lui s'efforce de respecter le paradoxe de la moquette : il s'appuie sur des protocoles connus, assez bien maîtrisés et facile à prendre en
-main (le courriel).\\Les clés peuvent être identifiées par l'adresse
+main (le courriel). Les clés peuvent être identifiées par l'adresse
 courriel et/ou l'empreinte. Ceci permet de les trouver facilement et rassure les utilisateurs.
 
 Et il n'était pas cassé par la NSA au dernières nouvelles.
