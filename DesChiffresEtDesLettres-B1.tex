@@ -1,16 +1,15 @@
 \documentclass[10pt,a4paper,openany]{book}
 \usepackage[francais]{babel}
-
+\frenchbsetup{ItemLabels=\textbullet}
 \include{preambule}
 
-\title{\huge\bsc{Des chiffres et des lettres}}
-\author{Stéphane \bsc{22Decembre Guedon}}
-\date{13 mai 2015}
+\title{\scshape Des chiffres et des lettres}
+\author{Stéphane 22Decembre Guedon}
+\date{3 juillet 2015}
 
-\pretitle{\begin{center}}
+\pretitle{\begin{center}\Huge}
 	
-\posttitle{
-	\newline
+\posttitle{\\
 		\Large\emph{Protéger ses communications en ligne\\et autres aspects de sa vie numérique\\}
 		\vspace{5mm}
 		\LARGE\emph{GnuPG et OpenPGP pour tous\\}
@@ -28,7 +27,7 @@
 	 \vspace{5mm}\\
 		}
 
-\predate{\begin{center} version 1 du }
+\predate{\begin{center} version base 1 du }
 	
 	
 \postdate{\end{center}}
@@ -45,16 +44,14 @@
 	
 	Ce How-to peut être lu sur mon site internet\footnote{version anglaise: \url{http://www.22decembre.eu/category/howto-gpg.html}. Cliquez sur les liens «fr» sous les titres pour lire les articles en français.} Je vous encourage vivement à le partager, le repartager, que ce soit pour la version en ligne (html) ou hors-ligne (le pdf que vous êtes en train de lire).
 	
-	Bien entendu, les textes ont été légèrement modifiés pour correspondre à la forme qui lui est donné ici, à savoir un mini livre.
+	Bien entendu, les textes ont été légèrement modifiés pour correspondre à la forme qui lui est donné ici, à savoir un mini livre. Mais j'ai conservé les exercices.
 	
 	Le but avoué de ce document est d'encourager les utilisateurs d'internet, soit en fait une grosse partie de la population occidentale, à protéger leurs communications telles que courriels et messagerie instantanée.
 	
 	Au moment même de la rédaction de ce livre, une loi extrêmement dangereuse pour les libertés 
 	civiles est en cours d'adoption par le parlement et le gouvernement français.\footnote{\url{http://www.senat.fr/espace_presse/actualites/201505/un_projet_de_loi_pour_renforcer_les_services_de_renseignement.html}}
 	
-	Le fichier support à ce document, à savoir le fichier pdf que vous lisez, est signé avec ma clé gpg ainsi que la clé gpg créée exprès pour les besoins de ce tutoriel.
-	
-	Les deux clés ont été incluses en pièces jointes au fichier pdf.
+	Le fichier support à ce document, à savoir le fichier pdf que vous lisez, est signé avec ma clé gpg ainsi que la clé gpg créée exprès pour les besoins de ce tutoriel et les deux clés ont été incluses en pièces jointes au fichier pdf.
 	
 	Voici leurs empreintes:
 	
@@ -73,7 +70,7 @@
 		\item L'ombre de la Justice, sous licence CC BY-NC-ND 2.0.\footnote{\url{https://www.flickr.com/photos/jmtimages/3286566742/}}
 	\end{itemize}
 	
-	Les sources au format \LaTeX sont disponibles dans le dépot github … . La version actuelle est … commit signé avec ma clé gpg.
+	Les sources au format \LaTeX sont disponibles dans le dépot github \url{https://github.com/tutogpgIn22D/book-fr}. Cette version a été tagée ``version base 1'' et signée avec ma clé gpg personnelle.
 	
 	\tableofcontents
 	\include{0-intro}
